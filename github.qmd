@@ -1,0 +1,111 @@
+---
+title: "Using GitHub"
+---
+
+## Version Control Background
+
+<img src="images/lter-logo.png" align="right" width="15%"/> 
+
+**Version control systems (including `git`) are built to preserve the iterative versions that we create on the way to a final product.** For instance, when writing a scientific manuscript we might have several discrete stages (e.g., separate drafts after successive rounds of feedback from collaborators) as well as the sort of small-scale changes we don't necessarily preserve in separate files (e.g., workshopping a particular sentence for rhetorical flow, etc.). Version control systems provide a framework for preserving these changes without cluttering your computer with all of the files that precede the final version.
+
+<img src="images/phd_comics_final.png" align="center" width = "60%" />
+
+### `git`-Specific Background
+
+<img src="images/github_logo.png" align="right" width="20%"/>
+
+`git` can be enabled on a specific folder (a.k.a "directory") on your file system to track any changes to any content in that folder (including content in sub-folders!). In `git` (and other version control systems) terms, this tracked folder is called a **repository** (formally: a specific data structure storing versioning information).
+
+Although there many ways to start a new repository, [GitHub](https://github.com/) (or any other cloud solutions, such as [GitLab](https://about.gitlab.com/)) provide among the most convenient way of starting a repository.
+
+## `git` versus GitHub
+
+- **`git`** is the version control software used to track files
+- **[GitHub](https://github.com/)** is a website that makes it easier to visualize the different repositories `git` is tracking for a particular user
+    - I.e., GitHub is a graphical user interface ("GUI") for `git`
+
+## Exploring GitHub
+
+In addition to hosting `git` repositories in a user-friendly way, **GitHub also contains several convenient collaboration features!** GitHub fosters a great user community to help problem solve and share user-designed coding tools and has great visualization and rendering capacities for data and websites.
+
+Let's navigate over to [GitHub](https://github.com/) and explore some of its features. Here is what the home screen looks like as of February 2022. 
+
+![](images/github-1-website.png)
+
+Once you have made an account on GitHub (in the same way you'd make an account on any other website), you can sign in by clicking the top right button.
+
+![](images/github-2-login.png)
+
+Once you've logged in, you should see something like this:
+
+![](images/github-3-signed-in.png)
+
+This landing page has a nice summary of your recent repositories and activity on the left panel. Click on your icon at the top left corner and navigate to your profile. 
+
+![](images/github-4-profile-light.png)
+
+Your profile page shows the organizations that you're a part of, as well as a more detailed view of your GitHub contributions/activities over time. There are also tabs at the top that lead you to your repositories, projects, packages, and starred repositories. If you would like, you can change your GitHub theme to dark mode by clicking on your icon at the top left corner and going to **Settings** then **Appearances**. For the purposes of this workshop, the rest of the screenshots for the GitHub website will be in dark mode to help differentiate it from RStudio screenshots.  
+
+![](images/github-5-dark-mode.png)
+
+If there is anything else you would like to change about your account, the user settings page should have it.
+
+### Looking at a GitHub Repository
+
+To check the repositories that you've created, click on the **Repositories** tab. Note that the top right corner has a green button that will allow you to create new repositories. We will come back to that later. Let's take a closer look at what the ucsb-ds-capstone-2021.github.io repository contains. 
+
+![](images/github-6-my-repos.png)
+
+This screen shows the copy of a repository stored on GitHub,
+with its **<span style="color:red">list of files</span>**, **<span style="color:green">when the files and directories were last modified</span>**, and **<span style="color:blue">some information on who made the most recent changes</span>**.
+
+![](images/github-7-example-repo.png)
+
+If we look at the blue rectangle, we can see that there have been 151 commits made to this repository. By clicking on that number with the counterclockwise arrow symbol beside it, we can see the history of changes made to all of the files. Looks like 3 users were making changes in April.
+
+![](images/github-8-commit-history.png)
+
+And finally, if we examine one of the changes made on April 25, we can see exactly what was changed in each file:
+
+![](images/github-9-specific-changes.png)
+
+The red lines have been deleted while the green lines are new additions. Tracking these changes, and seeing how they relate to released versions of software and files is exactly what `git` and GitHub are good for. We will show how they can really be effective for tracking versions of scientific code, figures, and manuscripts to accomplish a reproducible workflow.
+
+Note: it is possible to edit and add files entirely on the GitHub website, by navigating to the specific file or repository. However, for this workshop, we will be editing and adding files through RStudio instead. 
+
+### Creating a GitHub Repository
+
+While you can create a repository via RStudio and link it to GitHub after the fact, we find it simpler to create the repository on GitHub *first* then link that to an RStudio project so we will demonstrate that route.
+
+To create a new repository on GitHub, follow these steps:
+
+- Navigate to your profile page and click on the **Repositories** tab
+
+- Click on the **<span style="color:green">New button</span>** with a book with bookmark symbol
+
+![](images/rstudio-1-github-profile.png)
+
+- Enter a descriptive name for your new repository, here we named it `git-practice` (avoid upper case and use `-` instead of spaces or `_`).
+
+- Write a 1-sentence description about the repository content.
+
+- Choose **Public** (as of January 2019, GitHub now offers unlimited free private repositories with a maximum of 3 collaborators).
+
+- Check **Add a README file**.
+
+![](images/rstudio-3-new-repo-edits.png)
+
+Yay! We've just created a new repository! Here is what the landing page should look like:
+
+![](images/rstudio-5-new-repo-code-tab.png)
+
+This repository is currently public, so it's visible to anyone, but since we are working in groups, we will need to give access to your group members. Click on the **Settings** tab for your repository and go to **Collaborators**. 
+
+![](images/rstudio-5b-collabs-2-settings-collabs.png)
+
+Click on **<span style="color:green">Add people</span>**. Now let's get the usernames of all of your group members and add them as collaborators to your repository.
+
+![](images/rstudio-5b-collabs-3-search-for-users.png)
+![](images/rstudio-5b-collabs-4-added-new-user.png)
+
+Great! Now everyone in the group should have access to the repository. 

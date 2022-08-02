@@ -1,0 +1,56 @@
+---
+title: "Setting Up `git`"
+---
+
+## Appendix Caveat
+
+<img src="images/lter-logo.png" align="right" width="15%"/> 
+
+While this workshop has **no requirement that you set up `git` on your own computer** we thought it would be helpful to include the steps for that set up in case you are interested before or after.
+
+The steps that are necessary for creating the set up we wil demonstrate today fall under two categories:
+
+- Downloading needed software
+- Connecting that software
+
+## Downloading Programs
+
+**Note for those of you with a dedicated IT team that has sole power to install software on your computer.** You will need to contact them and request they install the three programs listed below.
+
+This workshop makes use of three programs: [R](https://www.r-project.org/), [RStudio](https://www.rstudio.com/products/rstudio/download/), and [`git`](https://happygitwithr.com/install-git.html).
+
+  - If you have R and RStudio and your version begins with a four (e.g., "4.x.x") then you do not *need* to update though it is sometimes useful to have the latest version.
+
+  - **If you are a Windows user**, be sure to follow along with "Option 1" in the instructions linked above! That variant gives some under-the-hood tools you'll implicitly rely on later
+
+## Connecting Programs
+
+Once you've installed (or updated), R, RStudio, and `git`, you'll need to interlink them.
+
+To begin, **[create a GitHub account](https://github.com/)** via your web browser of choice.
+
+Once you have an account on GitHub, tell `git` on your machine who you are on GitHub (i.e., [connect `git` & GitHub](https://happygitwithr.com/hello-git.html)). This step can be done in R/RStudio after you have installed the programs identified above (i.e., no need to visit the command line!).
+  
+```{r token-process, eval = FALSE}
+# Install the `usethis` and `gitcreds` packages
+#install.packages("usethis")
+#install.packages("gitcreds")
+library(usethis); library(gitcreds)
+
+# Add your GitHub username and email
+usethis::use_git_config(user.name = "Jane Doe",
+                        user.email = "jane@example.org")
+
+# Create a "personal access token" (Note this will open GitHub in a new browser tab)
+# See steps 6-10 in GitHub's tutorial (link below)
+usethis::create_github_token()
+
+# **Copy your Personal Access Token at the end of the above step!**
+
+# Now, give your token to RStudio
+# After you run this line you'll follow some prompts in the "Console" tab of RStudio
+gitcreds::gitcreds_set()
+```
+
+At the end of the above steps you should be all set! For additional information, see [GitHub's PAT Tutorial](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) or the [Happy Git with R PAT Tutorial](https://happygitwithr.com/https-pat.html). If this seems a little intimidating, please keep in mind that your experience with downloading programs and creating web accounts will help with these tasks even if you have more minimal coding experience! Also, **none of this is required for the ASM 2022 workshop** so feel free to skip this whole page of the site if you want!
+

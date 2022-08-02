@@ -2,45 +2,20 @@
 title: "Overview"
 ---
 
-<img src = "images/nceas_logo_wide.png" align = "right" width = "50%" />
+## Welcome!
 
-### Welcome!
+<img src="images/lter-logo-wide.png" align="right" width="50%"/>
 
-A short blurb on the topic of the workshop should be covered here. Strive to be welcoming and nonthreatening as this page includes our 'before you arrive' instructions and thus precedes workshop participants actually meeting us in person (or via Zoom).
+<img src="images/nceas-logo-wide.png" align="right" width="50%"/>
 
+**Welcome to the 2022 All Scientists' Meeting workshop "Reproducible & Collaborative Coding with Git"!** We are excited to have you with us for this training whether you are a veteran version control user or this is your first foray into the world of `git` and GitHub.
 
-We are always happy to improve workshop content so please don't hesitate to [post an Issue](https://github.com/NCEAS/scicomp-workshop-template/issues) on our GitHub repository if you see clear areas for improvement!
+While we will be demonstrating using `git` with RStudio today you do NOT need to set up your computer to follow along. That said, we have included instructions on how to get your computer set up *if* that is of interest.
 
-To maximize the value of this workshop to you, **we recommend you take the following steps before the day of the workshop**. If anything is unclear, feel free to reach out to us; our contact information can be found in the "Content Creators" tab.
+### Let's Get To It!
 
-## Programs to Install
+We aim to make this training fun, informative, and not overly terrifying so please reach out if you have any questions before, during, or after the workshop! Our contact information is listed below:
 
-### R & RStudio
+Nick Lyon: [lyon\@nceas.ucsb.edu](mailto:lyon@nceas.ucsb.edu){.email} | Angel Chen: [anchen\@nceas.ucsb.edu](mailto:anchen@nceas.ucsb.edu){.email}
 
-**Install [R](https://www.r-project.org/) and its more convenient (in our opinion) user-interface: [RStudio](https://www.rstudio.com/products/rstudio/download/)**.
-
-If you already have R, check that you have at least version 4.0.0 by running the following code:
-
-```{r, eval = F}
-version$version.string
-```
-
-If your version starts with a 3 (e.g., the above code returns "R version 3..."), please update R to make sure all packages behave as expected.
-
-### R Packages
-
-**Install the `package A` and `package B` R packages** using the following code:
-
-```{r, eval = F}
-install.packages("tidyverse", "palmerpenguins")
-library(tidyverse)
-library(palmerpenguins)
-```
-
-**Please run the above code even if you already have these packages** to update these packages and ensure that your code aligns with the examples and challenges introduced during the workshop.
-
-## Websites to Visit
-
-### Supplemental Material
-
-While not technically necessary to attend the workshop, if you'd like you can see the content that created the workshop website you are viewing by visiting our [GitHub repository here](https://github.com/NCEAS/scicomp-workshop-template).
+<img src="images/git-comic.png" align="center" width="40%"/>

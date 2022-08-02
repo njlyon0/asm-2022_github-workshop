@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ASM 2022 Workshop - GitHub - Content 1</title>
+<title>ASM 2022 Workshop - GitHub - Setting Up git</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -15,6 +15,69 @@ span.underline{text-decoration: underline;}
 div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -59,8 +122,8 @@ ul.task-list{list-style: none;}
 
 
 <link rel="stylesheet" href="styles.css">
-<meta name="twitter:title" content="ASM 2022 Workshop - GitHub - Content 1">
-<meta name="twitter:description" content="Duplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.">
+<meta name="twitter:title" content="ASM 2022 Workshop - GitHub - Setting Up git">
+<meta name="twitter:description" content="While this workshop has no requirement that you set up git on your own computer we thought it would be helpful to include the steps for that set up in case you are interested before or after.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -91,7 +154,7 @@ ul.task-list{list-style: none;}
     <a class="nav-link" href="./rstudio.html">RStudio and <code>git</code></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./setup.html">Setting Up <code>git</code></a>
+    <a class="nav-link active" href="./setup.html" aria-current="page">Setting Up <code>git</code></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html">Content Creators</a>
@@ -121,10 +184,9 @@ ul.task-list{list-style: none;}
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#workshop-topic-heading" id="toc-workshop-topic-heading" class="nav-link active" data-scroll-target="#workshop-topic-heading">Workshop Topic Heading</a>
-  <ul class="collapse">
-  <li><a href="#workshop-subheading" id="toc-workshop-subheading" class="nav-link" data-scroll-target="#workshop-subheading">Workshop Subheading</a></li>
-  </ul></li>
+  <li><a href="#appendix-caveat" id="toc-appendix-caveat" class="nav-link active" data-scroll-target="#appendix-caveat">Appendix Caveat</a></li>
+  <li><a href="#downloading-programs" id="toc-downloading-programs" class="nav-link" data-scroll-target="#downloading-programs">Downloading Programs</a></li>
+  <li><a href="#connecting-programs" id="toc-connecting-programs" class="nav-link" data-scroll-target="#connecting-programs">Connecting Programs</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/njlyon0/asm-2022_github-workshop/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -133,7 +195,7 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Content 1</h1>
+<h1 class="title">Setting Up <code>git</code></h1>
 </div>
 
 
@@ -147,16 +209,53 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<section id="workshop-topic-heading" class="level2">
-<h2 class="anchored" data-anchor-id="workshop-topic-heading">Workshop Topic Heading</h2>
-<p><img src="images/nceas_logo_square.png" align="right" width="15%"></p>
-<p>Duplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.yml” and run <code>quarto render</code> in the Terminal to add the page to the deployed website!**</p>
-<section id="workshop-subheading" class="level3">
-<h3 class="anchored" data-anchor-id="workshop-subheading">Workshop Subheading</h3>
-<p>It is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections.</p>
-
-
+<section id="appendix-caveat" class="level2">
+<h2 class="anchored" data-anchor-id="appendix-caveat">Appendix Caveat</h2>
+<p><img src="images/lter-logo.png" align="right" width="15%"></p>
+<p>While this workshop has <strong>no requirement that you set up <code>git</code> on your own computer</strong> we thought it would be helpful to include the steps for that set up in case you are interested before or after.</p>
+<p>The steps that are necessary for creating the set up we wil demonstrate today fall under two categories:</p>
+<ul>
+<li>Downloading needed software</li>
+<li>Connecting that software</li>
+</ul>
 </section>
+<section id="downloading-programs" class="level2">
+<h2 class="anchored" data-anchor-id="downloading-programs">Downloading Programs</h2>
+<p><strong>Note for those of you with a dedicated IT team that has sole power to install software on your computer.</strong> You will need to contact them and request they install the three programs listed below.</p>
+<p>This workshop makes use of three programs: <a href="https://www.r-project.org/">R</a>, <a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a>, and <a href="https://happygitwithr.com/install-git.html"><code>git</code></a>.</p>
+<ul>
+<li><p>If you have R and RStudio and your version begins with a four (e.g., “4.x.x”) then you do not <em>need</em> to update though it is sometimes useful to have the latest version.</p></li>
+<li><p><strong>If you are a Windows user</strong>, be sure to follow along with “Option 1” in the instructions linked above! That variant gives some under-the-hood tools you’ll implicitly rely on later</p></li>
+</ul>
+</section>
+<section id="connecting-programs" class="level2">
+<h2 class="anchored" data-anchor-id="connecting-programs">Connecting Programs</h2>
+<p>Once you’ve installed (or updated), R, RStudio, and <code>git</code>, you’ll need to interlink them.</p>
+<p>To begin, <strong><a href="https://github.com/">create a GitHub account</a></strong> via your web browser of choice.</p>
+<p>Once you have an account on GitHub, tell <code>git</code> on your machine who you are on GitHub (i.e., <a href="https://happygitwithr.com/hello-git.html">connect <code>git</code> &amp; GitHub</a>). This step can be done in R/RStudio after you have installed the programs identified above (i.e., no need to visit the command line!).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install the `usethis` and `gitcreds` packages</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("usethis")</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("gitcreds")</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(usethis); <span class="fu">library</span>(gitcreds)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Add your GitHub username and email</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_git_config</span>(<span class="at">user.name =</span> <span class="st">"Jane Doe"</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                        <span class="at">user.email =</span> <span class="st">"jane@example.org"</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a "personal access token" (Note this will open GitHub in a new browser tab)</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># See steps 6-10 in GitHub's tutorial (link below)</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># **Copy your Personal Access Token at the end of the above step!**</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Now, give your token to RStudio</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># After you run this line you'll follow some prompts in the "Console" tab of RStudio</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>At the end of the above steps you should be all set! For additional information, see <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">GitHub’s PAT Tutorial</a> or the <a href="https://happygitwithr.com/https-pat.html">Happy Git with R PAT Tutorial</a>. If this seems a little intimidating, please keep in mind that your experience with downloading programs and creating web accounts will help with these tasks even if you have more minimal coding experience! Also, <strong>none of this is required for the ASM 2022 workshop</strong> so feel free to skip this whole page of the site if you want!</p>
+
+
 </section>
 
 </main> <!-- /main -->

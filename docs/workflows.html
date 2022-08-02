@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ASM 2022 Workshop - GitHub - Content 1</title>
+<title>ASM 2022 Workshop - GitHub - Workflow Options</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,8 +59,8 @@ ul.task-list{list-style: none;}
 
 
 <link rel="stylesheet" href="styles.css">
-<meta name="twitter:title" content="ASM 2022 Workshop - GitHub - Content 1">
-<meta name="twitter:description" content="Duplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.">
+<meta name="twitter:title" content="ASM 2022 Workshop - GitHub - Workflow Options">
+<meta name="twitter:description" content="If you have worked on any file that requires iterative edits, you have had to develop a workflow to approach that task. This could be a scientific paper, analytic code, or a presentation.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -82,7 +82,7 @@ ul.task-list{list-style: none;}
     <a class="nav-link" href="./index.html">Home</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./workflows.html">Workflow Options</a>
+    <a class="nav-link active" href="./workflows.html" aria-current="page">Workflow Options</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./github.html">Using GitHub</a>
@@ -121,10 +121,11 @@ ul.task-list{list-style: none;}
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#workshop-topic-heading" id="toc-workshop-topic-heading" class="nav-link active" data-scroll-target="#workshop-topic-heading">Workshop Topic Heading</a>
-  <ul class="collapse">
-  <li><a href="#workshop-subheading" id="toc-workshop-subheading" class="nav-link" data-scroll-target="#workshop-subheading">Workshop Subheading</a></li>
-  </ul></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#individual-workflow" id="toc-individual-workflow" class="nav-link" data-scroll-target="#individual-workflow">Individual Workflow</a></li>
+  <li><a href="#data-lifecycle-considerations" id="toc-data-lifecycle-considerations" class="nav-link" data-scroll-target="#data-lifecycle-considerations">Data Lifecycle Considerations</a></li>
+  <li><a href="#synthesis-workflows-with-version-control" id="toc-synthesis-workflows-with-version-control" class="nav-link" data-scroll-target="#synthesis-workflows-with-version-control">Synthesis Workflows with Version Control</a></li>
+  <li><a href="#to-summarize" id="toc-to-summarize" class="nav-link" data-scroll-target="#to-summarize">To Summarize:</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/njlyon0/asm-2022_github-workshop/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -133,7 +134,7 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Content 1</h1>
+<h1 class="title">Workflow Options</h1>
 </div>
 
 
@@ -147,16 +148,40 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<section id="workshop-topic-heading" class="level2">
-<h2 class="anchored" data-anchor-id="workshop-topic-heading">Workshop Topic Heading</h2>
-<p><img src="images/nceas_logo_square.png" align="right" width="15%"></p>
-<p>Duplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.yml” and run <code>quarto render</code> in the Terminal to add the page to the deployed website!**</p>
-<section id="workshop-subheading" class="level3">
-<h3 class="anchored" data-anchor-id="workshop-subheading">Workshop Subheading</h3>
-<p>It is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections.</p>
-
-
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p><img src="images/lter-logo.png" align="right" width="15%"></p>
+<p>If you have worked on any file that requires iterative edits, you have had to develop a workflow to approach that task. This could be a scientific paper, analytic code, or a presentation. There are many possible ways you could approach this task leveraging any number of software and hardware options but before we get into our discussion today about collaborative research using GitHub we would like to–briefly–outline two of the typical forms these workflows can take and how they fit into a broader framework of individual and synthesis science.</p>
 </section>
+<section id="individual-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="individual-workflow">Individual Workflow</h2>
+<p>At its simplest, <strong>you could be storing your data and code on your local machine and doing the entirety of your work alone</strong>. When working on your code you would iteratively edit and save the same code file and you would have a static folder (or folders) for data that you added to as you collected and entered or downloaded additional data.</p>
+<p>There are variants of this where you may be archiving everything on your hard drive (e.g., Time Machine on Mac OS, etc.) and you may be using a “save as” feature to preserve some iterations of your code. You may also perform this same operation within a cloud-based storage system (e.g., Box, Dropbox, Google Drive, etc.) so that some versions of both code and data are preserved implicitly based on time stamps.</p>
+<p><strong>This approach has the advantage of relatively few moving parts but risks losing all previous versions that aren’t explicitly preserved</strong> (as well as a record of the changes from version to version).</p>
+<p>Another limitation of this approach is that to work collaboratively, everything would need to be manually shared with your collaborator(s) which introduces a significant risk that someone in the research team would accidentally use the “wrong” version of either the code or the data.</p>
+<p><img src="images/workflow-no-version-control.png" width="75%"></p>
+</section>
+<section id="data-lifecycle-considerations" class="level2">
+<h2 class="anchored" data-anchor-id="data-lifecycle-considerations">Data Lifecycle Considerations</h2>
+<p>The above approach works when doing largely individual research, but what about at other stages in the typical life cycle of data? Said life cycle is displayed below where data are acquired via planning and collection, assessed and preserved, and finally, synthesized and used to inform future plans and collection.</p>
+<p>Individual workflows performed by a small research team can be well-served by the relatively bare-bones workflow illustrated above but such projects often emphasize data acquisition and preservation over synthesis and thus are not <em>as</em> limited by a need for real-time collaboration on coding scripts across a team. Individual projects certainly do data synthesis, they just by their nature have to emphasize data collection at least as much as the synthetic components of research.</p>
+<p>However, for larger teams–especially those that span disciplinary boundaries or have ongoing data collection protocols (e.g., research coordination networks, working groups, etc.)–the synthesis part of the data life cycle often becomes progressively more important. This importance is tightly linked to <strong>a need for collaboration among team members on wrangling, analysis, and visualization scripts that in individual workflows can be managed by a single team member but cannot be in synthesis projects.</strong></p>
+<p>Collaboration on coding can be accomplished by manually sharing code and data among group members but there are programs and websites that are specifically dedicated to meeting the need for collaboration. One example is “version control” systems (e.g., GitHub, SVN, etc.) that provide a framework for reproducible group work.</p>
+<p><img src="images/data-lifecycle.png" width="75%"></p>
+</section>
+<section id="synthesis-workflows-with-version-control" class="level2">
+<h2 class="anchored" data-anchor-id="synthesis-workflows-with-version-control">Synthesis Workflows with Version Control</h2>
+<p><strong>Version control systems preserve the iterative changes you and your team make to code</strong> <em>and</em> allow for informative titles and messages to be attached to these snapshots. This offers a clear advantage over ambiguous time-stamped versions preserved by cloud storage systems as it facilitates re-visiting code long after or by new team members who were not present for the initial writing. This approach is what we will be covering in greater depth in a few moments but the broad strokes are that you would preserve the history of your work and ensure that everyone uses the “right” version of the code.</p>
+<p>However, despite its advantages for collaborative coding, version control is not meant for preserving data so you would still need to share data with your collaborators either via email or by storing data in the cloud and sharing links with team members. This shares the risk of the individual workflow of members using the wrong version of the data <em>but</em> <strong>this method ensures all team members are using the correct code.</strong></p>
+<p><img src="images/workflow-no-server.png" width="75%"></p>
+</section>
+<section id="to-summarize" class="level2">
+<h2 class="anchored" data-anchor-id="to-summarize">To Summarize:</h2>
+<p>While each approach offers its own strengths and weaknesses, <strong>in our experience many scientists avoid version control workflows due to knowledge barriers for getting set up rather than disagreements with the practicalities of version control.</strong></p>
+<p>Today, we will strive to cover the fundamentals of using a version control system to empower you to at least consider this structure as an option going forward.</p>
+<p>Please don’t hesitate to ask questions and remember that this link is a resource that you should feel free to refer back to if you ever need a refresher (or wish to teach peers)! There is a supplementary appendix at the end of this document that is intended to help you set up version control with <code>git</code>, GitHub, and RStudio should that be of interest.</p>
+
+
 </section>
 
 </main> <!-- /main -->
