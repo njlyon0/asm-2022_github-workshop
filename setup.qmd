@@ -32,10 +32,9 @@ To begin, **[create a GitHub account](https://github.com/)** via your web browse
 Once you have an account on GitHub, tell `git` on your machine who you are on GitHub (i.e., [connect `git` & GitHub](https://happygitwithr.com/hello-git.html)). This step can be done in R/RStudio after you have installed the programs identified above (i.e., no need to visit the command line!).
   
 ```{r token-process, eval = FALSE}
-# Install the `usethis` and `gitcreds` packages
-#install.packages("usethis")
-#install.packages("gitcreds")
-library(usethis); library(gitcreds)
+# Install needed packages
+install.packages("librarian")
+librarian::shelf(usethis, gitcreds)
 
 # Add your GitHub username and email
 usethis::use_git_config(user.name = "Jane Doe",
