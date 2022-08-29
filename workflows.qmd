@@ -4,8 +4,6 @@ title: "Workflow Options"
 
 ## Overview
 
-<img src="images/lter-logo.png" align="right" width="15%"/> 
-
 If you have worked on any file that requires iterative edits, you have had to develop a workflow to approach that task. This could be a scientific paper, analytic code, or a presentation. There are many possible ways you could approach this task leveraging any number of software and hardware options but before we get into our discussion today about collaborative research using GitHub we would like to--briefly--outline two of the typical forms these workflows can take and how they fit into a broader framework of individual and synthesis science.
 
 ## Individual Workflow

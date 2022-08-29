@@ -4,15 +4,13 @@ title: "Using GitHub"
 
 ## Version Control Background
 
-<img src="images/lter-logo.png" align="right" width="15%"/> 
-
 **Version control systems (including `git`) are built to preserve the iterative versions that we create on the way to a final product.** For instance, when writing a scientific manuscript we might have several discrete stages (e.g., separate drafts after successive rounds of feedback from collaborators) as well as the sort of small-scale changes we don't necessarily preserve in separate files (e.g., workshopping a particular sentence for rhetorical flow, etc.). Version control systems provide a framework for preserving these changes without cluttering your computer with all of the files that precede the final version.
 
 <img src="images/phd_comics_final.png" align="center" width = "60%" />
 
 ### `git`-Specific Background
 
-<img src="images/github_logo.png" align="right" width="20%"/>
+<img src="images/github_logo.png" align="right" width="15%"/>
 
 `git` can be enabled on a specific folder (a.k.a "directory") on your file system to track any changes to any content in that folder (including content in sub-folders!). In `git` (and other version control systems) terms, this tracked folder is called a **repository** (formally: a specific data structure storing versioning information).
 

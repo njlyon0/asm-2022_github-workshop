@@ -4,9 +4,7 @@ title: "Setting Up `git`"
 
 ## Appendix Caveat
 
-<img src="images/lter-logo.png" align="right" width="15%"/> 
-
-While this workshop has **no requirement that you set up `git` on your own computer** we thought it would be helpful to include the steps for that set up in case you are interested before or after.
+**This workshop has no requirement that you set up `git` on your own computer.** However, we thought it would be helpful to include the steps for that set up in case you are interested before or after.
 
 The steps that are necessary for creating the set up we wil demonstrate today fall under two categories:
 
@@ -21,7 +19,7 @@ This workshop makes use of three programs: [R](https://www.r-project.org/), [RSt
 
   - If you have R and RStudio and your version begins with a four (e.g., "4.x.x") then you do not *need* to update though it is sometimes useful to have the latest version.
 
-  - **If you are a Windows user**, be sure to follow along with "Option 1" in the instructions linked above! That variant gives some under-the-hood tools you'll implicitly rely on later
+  - **For the `git` instructions, if you are a Windows user**, be sure to follow along with "Option 1" in the 'installing `git` instructions above! That variant gives some under-the-hood tools you'll implicitly rely on later that come preloaded in non-Windows computers.
 
 ## Connecting Programs
 
@@ -51,5 +49,5 @@ usethis::create_github_token()
 gitcreds::gitcreds_set()
 ```
 
-At the end of the above steps you should be all set! For additional information, see [GitHub's PAT Tutorial](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) or the [Happy Git with R PAT Tutorial](https://happygitwithr.com/https-pat.html). If this seems a little intimidating, please keep in mind that your experience with downloading programs and creating web accounts will help with these tasks even if you have more minimal coding experience! Also, **none of this is required for the ASM 2022 workshop** so feel free to skip this whole page of the site if you want!
+At the end of the above steps you should be all set! For additional information, see [GitHub's PAT Tutorial](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) or the [Happy Git with R PAT Tutorial](https://happygitwithr.com/https-pat.html). If this seems a little intimidating, please keep in mind that your experience with downloading programs and creating web accounts will help with these tasks even if you have more minimal coding experience! Again, **none of this is required for the ASM 2022 workshop** so feel free to skip this whole page of the site if you want!
 
