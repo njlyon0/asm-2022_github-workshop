@@ -15,9 +15,11 @@ The steps that are necessary for creating the set up we wil demonstrate today fa
 
 **Note for those of you with a dedicated IT team that has sole power to install software on your computer.** You will need to contact them and request they install the three programs listed below.
 
-This workshop makes use of three programs: [R](https://www.r-project.org/), [RStudio](https://www.rstudio.com/products/rstudio/download/), and [`git`](https://happygitwithr.com/install-git.html).
+This workshop makes use of three programs: [R](https://www.r-project.org/), [RStudio](https://www.rstudio.com/products/rstudio/download/), and [`git`](https://happygitwithr.com/install-git.html). **If you'd like to follow along with us during the workshop you'll need to install all three programs!**
 
-  - If you have R and RStudio and your version begins with a four (e.g., "4.x.x") then you do not *need* to update though it is sometimes useful to have the latest version.
+  - If you have R and your version begins with the number four (e.g., "4.x.x") then you do not *need* to update though it is sometimes useful to have the latest version
+  
+  - If you have RStudio and your version starts with 2022 (e.g., "2022.xx.x") then you don't need to update this either
 
   - **For the `git` instructions, if you are a Windows user**, be sure to follow along with "Option 1" in the 'installing `git` instructions above! That variant gives some under-the-hood tools you'll implicitly rely on later that come preloaded in non-Windows computers.
 
