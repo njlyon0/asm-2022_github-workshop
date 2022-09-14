@@ -148,10 +148,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <a class="nav-link" href="./workflows.html">Workflow Options</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./github.html">Using GitHub</a>
+    <a class="nav-link" href="./github.html">Exploring GitHub</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./rstudio.html">RStudio and <code>git</code></a>
+    <a class="nav-link" href="./rstudio.html">RStudio &amp; <code>git</code></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./setup.html" aria-current="page">Setting Up <code>git</code></a>
@@ -187,6 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#appendix-caveat" id="toc-appendix-caveat" class="nav-link active" data-scroll-target="#appendix-caveat">Appendix Caveat</a></li>
   <li><a href="#downloading-programs" id="toc-downloading-programs" class="nav-link" data-scroll-target="#downloading-programs">Downloading Programs</a></li>
   <li><a href="#connecting-programs" id="toc-connecting-programs" class="nav-link" data-scroll-target="#connecting-programs">Connecting Programs</a></li>
+  <li><a href="#github-password-versus-token" id="toc-github-password-versus-token" class="nav-link" data-scroll-target="#github-password-versus-token">GitHub Password versus Token</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/njlyon0/asm-2022_github-workshop/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     <div class="quarto-margin-footer"><div class="margin-footer-item">
@@ -245,16 +246,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>                        <span class="at">user.email =</span> <span class="st">"jane@example.org"</span>)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a "personal access token" (Note this will open GitHub in a new browser tab)</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># See steps 6-10 in GitHub's tutorial (link below)</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># **Copy your Personal Access Token at the end of the above step!**</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Now, give your token to RStudio</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># After you run this line you'll follow some prompts in the "Console" tab of RStudio</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="do">## See steps 6-10 in GitHub's tutorial (link below)</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="do">## See below for password vs. token explanation</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># **Copy your Personal Access Token at the end of the above step!**</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Now, give your token to RStudio</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># After you run this line you'll follow some prompts in the "Console" tab of RStudio</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>At the end of the above steps you should be all set! For additional information, see <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">GitHub’s PAT Tutorial</a> or the <a href="https://happygitwithr.com/https-pat.html">Happy Git with R PAT Tutorial</a>. If this seems a little intimidating, please keep in mind that your experience with downloading programs and creating web accounts will help with these tasks even if you have more minimal coding experience! Again, <strong>none of this is required for the ASM 2022 workshop</strong> so feel free to skip this whole page of the site if you want!</p>
+<p>At the end of the above steps you should be all set! For additional information, see <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">GitHub’s PAT Tutorial</a> or the <a href="https://happygitwithr.com/https-pat.html">Happy Git with R PAT Tutorial</a>. If this seems a little intimidating, please keep in mind that your experience with downloading programs and creating web accounts will help with these tasks even if you feel that your coding experience is minimal! Again, <strong>none of this is required for the ASM 2022 workshop</strong> so feel free to skip this whole page of the site if you want!</p>
+</section>
+<section id="github-password-versus-token" class="level2">
+<h2 class="anchored" data-anchor-id="github-password-versus-token">GitHub Password versus Token</h2>
+<p>If you’ve used <code>git</code>/GitHub before you may have used your GitHub password both to log in online and prove you have authority to access your online repositories when pushing or pulling. If this is the case you may be asking ‘wait, why do I need a token if I already have a password?’. Well, while GitHub still allows passwords for logging in online, they have stopped supporting them for allowing you to push/pull to/from your repositories. A token is GitHub’s method of forcing you to create basically a second, really strong password that ensures your use of <code>git</code> meets their standards of security.</p>
+<p>If you’ve made a token (or gotten to the token creation step) you may have seen that you decide what powers a specific token is allowed to do and you can set a date where your token expires automatically. This could be helpful if you were working on a public computer because you could create a token that only had the bare minimum power you needed in that moment <em>and</em> you could set it to delete itself after a few days or weeks. If you are working on your own private computer it can sometimes be easier to just give your token all possible powers and set it to never expire but note that GitHub will warn you that this is a security risk (if someone ever got that token they would be able to do anything they wanted until you deleted the token manually). Security risk or no, we have definitely made omnipotent, everlasting tokens to avoid the hassle of re-setting it every however many months so feel free to do the same if you’d like.</p>
+<p><a href="https://www.merriam-webster.com/dictionary/TL%3BDR">TL;DR</a>: <strong>You need to create a token even if you have used a password in the past.</strong> Also, when you create the token and GitHub shows you the long string of letters/numbers, <strong>we recommend you copy/paste it into an Excel file so you can always find it again if you need to remind RStudio of it in the future.</strong></p>
 
 
 </section>

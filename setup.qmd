@@ -41,8 +41,9 @@ usethis::use_git_config(user.name = "Jane Doe",
                         user.email = "jane@example.org")
 
 # Create a "personal access token" (Note this will open GitHub in a new browser tab)
-# See steps 6-10 in GitHub's tutorial (link below)
 usethis::create_github_token()
+## See steps 6-10 in GitHub's tutorial (link below)
+## See below for password vs. token explanation
 
 # **Copy your Personal Access Token at the end of the above step!**
 
@@ -51,5 +52,12 @@ usethis::create_github_token()
 gitcreds::gitcreds_set()
 ```
 
-At the end of the above steps you should be all set! For additional information, see [GitHub's PAT Tutorial](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) or the [Happy Git with R PAT Tutorial](https://happygitwithr.com/https-pat.html). If this seems a little intimidating, please keep in mind that your experience with downloading programs and creating web accounts will help with these tasks even if you have more minimal coding experience! Again, **none of this is required for the ASM 2022 workshop** so feel free to skip this whole page of the site if you want!
+At the end of the above steps you should be all set! For additional information, see [GitHub's PAT Tutorial](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) or the [Happy Git with R PAT Tutorial](https://happygitwithr.com/https-pat.html). If this seems a little intimidating, please keep in mind that your experience with downloading programs and creating web accounts will help with these tasks even if you feel that your coding experience is minimal! Again, **none of this is required for the ASM 2022 workshop** so feel free to skip this whole page of the site if you want!
 
+## GitHub Password versus Token
+
+If you've used `git`/GitHub before you may have used your GitHub password both to log in online and prove you have authority to access your online repositories when pushing or pulling. If this is the case you may be asking 'wait, why do I need a token if I already have a password?'. Well, while GitHub still allows passwords for logging in online, they have stopped supporting them for allowing you to push/pull to/from your repositories. A token is GitHub's method of forcing you to create basically a second, really strong password that ensures your use of `git` meets their standards of security.
+
+If you've made a token (or gotten to the token creation step) you may have seen that you decide what powers a specific token is allowed to do and you can set a date where your token expires automatically. This could be helpful if you were working on a public computer because you could create a token that only had the bare minimum power you needed in that moment *and* you could set it to delete itself after a few days or weeks. If you are working on your own private computer it can sometimes be easier to just give your token all possible powers and set it to never expire but note that GitHub will warn you that this is a security risk (if someone ever got that token they would be able to do anything they wanted until you deleted the token manually). Security risk or no, we have definitely made omnipotent, everlasting tokens to avoid the hassle of re-setting it every however many months so feel free to do the same if you'd like.
+
+[TL;DR](https://www.merriam-webster.com/dictionary/TL%3BDR): **You need to create a token even if you have used a password in the past.** Also, when you create the token and GitHub shows you the long string of letters/numbers, **we recommend you copy/paste it into an Excel file so you can always find it again if you need to remind RStudio of it in the future.**
