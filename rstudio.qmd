@@ -1,5 +1,5 @@
 ---
-title: "RStudio and `git`"
+title: "RStudio & `git`"
 ---
 
 ## Brief Overview of `git` Workflow
