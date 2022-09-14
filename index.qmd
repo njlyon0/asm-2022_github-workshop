@@ -12,10 +12,28 @@ title: "Overview"
 
 While we will be demonstrating using `git` with RStudio today you do NOT need to set up your computer to follow along. That said, we have included instructions on how to get your computer set up *if* that is of interest.
 
-### Let's Get To It!
+## Workshop Outline*
+
+*Note that the specific timing may differ on the day depending on questions and conversations with you all but this is our planned timing.
+
+3:30p (PT) -- Welcome & Introductions
+
+3:40 -- Workflow Options
+
+3:55 -- Exploring GitHub
+
+4:20 -- RStudio & `git`
+
+4:50 -- Debrief / Overall Q & A
+
+**5:00 -- Done!**
+
+## Let's Get To It!
 
 We aim to make this training fun, informative, and not overly terrifying so please reach out if you have any questions before, during, or after the workshop! Our contact information is listed below:
 
 Nick Lyon: [lyon\@nceas.ucsb.edu](mailto:lyon@nceas.ucsb.edu){.email} | Angel Chen: [anchen\@nceas.ucsb.edu](mailto:anchen@nceas.ucsb.edu){.email}
 
 <img src="images/git-comic.png" align="center" width="40%"/>
+
+
