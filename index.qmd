@@ -36,4 +36,9 @@ Nick Lyon: [lyon\@nceas.ucsb.edu](mailto:lyon@nceas.ucsb.edu){.email} | Angel Ch
 
 <img src="images/git-comic.png" align="center" width="40%"/>
 
+## Post Workshop Survey
+
+We would love to hear from you all about how we did today! After the workshop, please visit [our post-workshop survey](https://docs.google.com/forms/d/e/1FAIpQLSebud3CCJwLhS51Lhv5tpMVZi8KSEn8ZVVJR5segfNA94t2Mw/viewform?usp=sf_link) or scan this QR code!
+
+<img src="images/asm-github-survey.png" align="center" width="30%" />
 
