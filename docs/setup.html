@@ -2,19 +2,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.37">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ASM 2022 Workshop - GitHub - Setting Up git</title>
+<title>ASM 2022 Workshop - GitHub - Setting Up Git</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -41,43 +47,13 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -116,14 +92,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
 
 <link rel="stylesheet" href="styles.css">
-<meta name="twitter:title" content="ASM 2022 Workshop - GitHub - Setting Up git">
-<meta name="twitter:description" content="This workshop has no requirement that you set up git on your own computer. However, we thought it would be helpful to include the steps for that set up in case you are interested before or after.">
+<meta name="twitter:title" content="ASM 2022 Workshop - GitHub - Setting Up Git">
+<meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -133,44 +110,63 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="./index.html">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">ASM 2022 Workshop - GitHub</span>
-  </a>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">Home</a>
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./workflows.html">Workflow Options</a>
+    <a class="nav-link" href="./workflows.html" rel="" target="">
+ <span class="menu-text">Workflows</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./github.html">Exploring GitHub</a>
+    <a class="nav-link" href="./github.html" rel="" target="">
+ <span class="menu-text">GitHub</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./rstudio.html">RStudio &amp; <code>git</code></a>
+    <a class="nav-link" href="./rstudio.html" rel="" target="">
+ <span class="menu-text">RStudio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./setup.html" aria-current="page">Setting Up <code>git</code></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html">Content Creators</a>
+    <a class="nav-link active" href="./setup.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Appendix</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-content-creators" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Content Creators</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-content-creators">    
+        <li>
+    <a class="dropdown-item" href="https://angelchen7.github.io/" rel="" target="">
+ <span class="dropdown-text">Angel Chen</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://njlyon0.github.io/" rel="" target="">
+ <span class="dropdown-text">Nick Lyon</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/njlyon0/asm-2022_github-workshop"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/njlyon0/asm-2022_github-workshop" rel="" target=""><i class="bi bi-github" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -180,7 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
@@ -198,7 +194,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Setting Up <code>git</code></h1>
+<h1 class="title">Setting Up Git</h1>
 </div>
 
 
@@ -206,6 +202,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
@@ -214,7 +211,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <section id="appendix-caveat" class="level2">
 <h2 class="anchored" data-anchor-id="appendix-caveat">Appendix Caveat</h2>
-<p><strong>This workshop has no requirement that you set up <code>git</code> on your own computer.</strong> However, we thought it would be helpful to include the steps for that set up in case you are interested before or after.</p>
+<p><strong>This workshop has no requirement that you set up Git on your own computer.</strong> However, we thought it would be helpful to include the steps for that set up in case you are interested before or after.</p>
 <p>The steps that are necessary for creating the set up we wil demonstrate today fall under two categories:</p>
 <ul>
 <li>Downloading needed software</li>
@@ -224,18 +221,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="downloading-programs" class="level2">
 <h2 class="anchored" data-anchor-id="downloading-programs">Downloading Programs</h2>
 <p><strong>Note for those of you with a dedicated IT team that has sole power to install software on your computer.</strong> You will need to contact them and request they install the three programs listed below.</p>
-<p>This workshop makes use of three programs: <a href="https://www.r-project.org/">R</a>, <a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a>, and <a href="https://happygitwithr.com/install-git.html"><code>git</code></a>. <strong>If you’d like to follow along with us during the workshop you’ll need to install all three programs!</strong></p>
+<p>This workshop makes use of three programs: <a href="https://www.r-project.org/">R</a>, <a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a>, and <a href="https://happygitwithr.com/install-git.html">Git</a>. <strong>If you’d like to follow along with us during the workshop you’ll need to install all three programs!</strong></p>
 <ul>
 <li><p>If you have R and your version begins with the number four (e.g., “4.x.x”) then you do not <em>need</em> to update though it is sometimes useful to have the latest version</p></li>
 <li><p>If you have RStudio and your version starts with 2022 (e.g., “2022.xx.x”) then you don’t need to update this either</p></li>
-<li><p><strong>For the <code>git</code> instructions, if you are a Windows user</strong>, be sure to follow along with “Option 1” in the ’installing <code>git</code> instructions above! That variant gives some under-the-hood tools you’ll implicitly rely on later that come preloaded in non-Windows computers.</p></li>
+<li><p><strong>For the Git instructions, if you are a Windows user</strong>, be sure to follow along with “Option 1” in the ’installing Git instructions above! That variant gives some under-the-hood tools you’ll implicitly rely on later that come preloaded in non-Windows computers.</p></li>
 </ul>
 </section>
 <section id="connecting-programs" class="level2">
 <h2 class="anchored" data-anchor-id="connecting-programs">Connecting Programs</h2>
-<p>Once you’ve installed (or updated), R, RStudio, and <code>git</code>, you’ll need to interlink them.</p>
+<p>Once you’ve installed (or updated), R, RStudio, and Git, you’ll need to interlink them.</p>
 <p>To begin, <strong><a href="https://github.com/">create a GitHub account</a></strong> via your web browser of choice.</p>
-<p>Once you have an account on GitHub, tell <code>git</code> on your machine who you are on GitHub (i.e., <a href="https://happygitwithr.com/hello-git.html">connect <code>git</code> &amp; GitHub</a>). This step can be done in R/RStudio after you have installed the programs identified above (i.e., no need to visit the command line!).</p>
+<p>Once you have an account on GitHub, tell Git on your machine who you are on GitHub (i.e., <a href="https://happygitwithr.com/hello-git.html">connect Git &amp; GitHub</a>). This step can be done in R/RStudio after you have installed the programs identified above (i.e., no need to visit the command line!).</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install needed packages</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"librarian"</span>)</span>
@@ -260,7 +257,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="github-password-versus-token" class="level2">
 <h2 class="anchored" data-anchor-id="github-password-versus-token">GitHub Password versus Token</h2>
-<p>If you’ve used <code>git</code>/GitHub before you may have used your GitHub password both to log in online and prove you have authority to access your online repositories when pushing or pulling. If this is the case you may be asking ‘wait, why do I need a token if I already have a password?’. Well, while GitHub still allows passwords for logging in online, they have stopped supporting them for allowing you to push/pull to/from your repositories. A token is GitHub’s method of forcing you to create basically a second, really strong password that ensures your use of <code>git</code> meets their standards of security.</p>
+<p>If you’ve used Git/GitHub before you may have used your GitHub password both to log in online and prove you have authority to access your online repositories when pushing or pulling. If this is the case you may be asking ‘wait, why do I need a token if I already have a password?’. Well, while GitHub still allows passwords for logging in online, they have stopped supporting them for allowing you to push/pull to/from your repositories. A token is GitHub’s method of forcing you to create basically a second, really strong password that ensures your use of Git meets their standards of security.</p>
 <p>If you’ve made a token (or gotten to the token creation step) you may have seen that you decide what powers a specific token is allowed to do and you can set a date where your token expires automatically. This could be helpful if you were working on a public computer because you could create a token that only had the bare minimum power you needed in that moment <em>and</em> you could set it to delete itself after a few days or weeks. If you are working on your own private computer it can sometimes be easier to just give your token all possible powers and set it to never expire but note that GitHub will warn you that this is a security risk (if someone ever got that token they would be able to do anything they wanted until you deleted the token manually). Security risk or no, we have definitely made omnipotent, everlasting tokens to avoid the hassle of re-setting it every however many months so feel free to do the same if you’d like.</p>
 <p><a href="https://www.merriam-webster.com/dictionary/TL%3BDR">TL;DR</a>: <strong>You need to create a token even if you have used a password in the past.</strong> Also, when you create the token and GitHub shows you the long string of letters/numbers, <strong>we recommend you copy/paste it into an Excel file so you can always find it again if you need to remind RStudio of it in the future.</strong></p>
 
@@ -339,6 +336,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         }
       }
     }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
   }
   const isFileUrl = () => { 
     return window.location.protocol === 'file:';
@@ -390,7 +397,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   // Switch to dark mode if need be
   if (hasAlternateSentinel()) {
     toggleColorMode(true);
-  } 
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -398,9 +407,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -412,7 +435,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -440,31 +480,136 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -472,7 +617,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -485,7 +630,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-      <div class="nav-footer-center">Copyright 2022, NCEAS</div>
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Copyright 2022, NCEAS</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
   </div>
 </footer>
 

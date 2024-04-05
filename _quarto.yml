@@ -17,12 +17,21 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - workflows.qmd
-      - github.qmd
-      - rstudio.qmd
-      - setup.qmd
-      - about.qmd
+      - text: "Workflows"
+        href: workflows.qmd
+      - text: "GitHub"
+        href: github.qmd
+      - text: "RStudio"
+        href: rstudio.qmd
+      - text: "Appendix"
+        href: setup.qmd
     right:
+      - text: "Content Creators"
+        menu:
+          - text: "Angel Chen"
+            href: https://angelchen7.github.io/
+          - text: "Nick Lyon"
+            href: https://njlyon0.github.io/      
       - icon: github
         href: https://github.com/njlyon0/asm-2022_github-workshop
   page-footer:

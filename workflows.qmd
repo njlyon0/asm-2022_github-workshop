@@ -44,4 +44,4 @@ While each approach offers its own strengths and weaknesses, **in our experience
 
 Today, we will strive to cover the fundamentals of using a version control system to empower you to at least consider this structure as an option going forward.
 
-Please don't hesitate to ask questions and remember that this link is a resource that you should feel free to refer back to if you ever need a refresher (or wish to teach peers)! There is a supplementary appendix at the end of this document that is intended to help you set up version control with `git`, GitHub, and RStudio should that be of interest.
+Please don't hesitate to ask questions and remember that this link is a resource that you should feel free to refer back to if you ever need a refresher (or wish to teach peers)! There is a supplementary appendix at the end of this document that is intended to help you set up version control with Git, GitHub, and RStudio should that be of interest.

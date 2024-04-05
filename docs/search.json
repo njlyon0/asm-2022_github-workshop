@@ -1,35 +1,154 @@
 [
   {
+    "objectID": "rstudio.html",
+    "href": "rstudio.html",
+    "title": "RStudio & Git",
+    "section": "",
+    "text": "Before we get into using Git and GitHub through RStudio, it will be helpful to review the major steps of including version control as you work on code.\nBeginning on your local computer, you make changes to a file in a folder that you have previously marked for version control tracking (i.e., a working directory). Once those changes are made you can stage changes within your local computer. After staging, it is best to retrieve the latest file versions from the cloud. You likely will already be up-to-date but this preemptive step can save you a lot of heartache down the line. Once you’ve confirmed that you have the latest file versions, you can shift the revised file(s) to the cloud where any GitHub users with access to your project can access the most recent file and look at the history of all previous changes."
+  },
+  {
+    "objectID": "rstudio.html#brief-overview-of-git-workflow",
+    "href": "rstudio.html#brief-overview-of-git-workflow",
+    "title": "RStudio & Git",
+    "section": "",
+    "text": "Before we get into using Git and GitHub through RStudio, it will be helpful to review the major steps of including version control as you work on code.\nBeginning on your local computer, you make changes to a file in a folder that you have previously marked for version control tracking (i.e., a working directory). Once those changes are made you can stage changes within your local computer. After staging, it is best to retrieve the latest file versions from the cloud. You likely will already be up-to-date but this preemptive step can save you a lot of heartache down the line. Once you’ve confirmed that you have the latest file versions, you can shift the revised file(s) to the cloud where any GitHub users with access to your project can access the most recent file and look at the history of all previous changes."
+  },
+  {
+    "objectID": "rstudio.html#git-vocabulary",
+    "href": "rstudio.html#git-vocabulary",
+    "title": "RStudio & Git",
+    "section": "Git Vocabulary",
+    "text": "Git Vocabulary\nFinally, it will be helpful to introduce four key pieces of vocabulary before we dive into the rest of this workshop.\n\nClone = copy the entire contents of a GitHub repository to your local computer (done once per computer)\nCommit = move a changed local file to your local staging area (step 2 of the above diagram)\nPull = get file(s) from the cloud to your local computer – opposite of a “push” (step 3)\nPush = move file(s) to the cloud from your local computer – opposite of a “pull” (step 4)"
+  },
+  {
+    "objectID": "rstudio.html#cloning-a-repository",
+    "href": "rstudio.html#cloning-a-repository",
+    "title": "RStudio & Git",
+    "section": "Cloning a Repository",
+    "text": "Cloning a Repository\nNow, the first step in using Git with RStudio is cloning the repository from GitHub. Note for clarity that in the screenshots below, GitHub is in dark mode while RStudio is in light mode. To clone a repository, follow these steps:\n\nNavigate to the repository on GitHub and click on Code. Select HTTPS and copy the link.\n\n\nNow we switch over to RStudio.\n\nGo to the Project tab on the top right corner and click New Project…. Note that if you don’t use RStudio Projects typically, you will need to use them for any repositories you’d like Git to track and GitHub to reflect.\n\n\nSelect Version Control.\n\n\nSelect Git.\n\nPaste the repository URL that you just copied from GitHub. Choose a file path on your local computer as the destination for your new project.\n\nNow we have finished cloning the repository to our RStudio! Notice that we are working in our git-practice project and that our README.md file shows up under the list of files, just like in our GitHub repository."
+  },
+  {
+    "objectID": "rstudio.html#git-workflow-overview-reminder",
+    "href": "rstudio.html#git-workflow-overview-reminder",
+    "title": "RStudio & Git",
+    "section": "Git Workflow Overview Reminder",
+    "text": "Git Workflow Overview Reminder\nThe typical workflow with Git goes like this:\nStep 1: You modify files in your working directory and save them as usual.\nStep 2: You stage files to mark your intention to “commit” them and then commit that version of those files.\n- In RStudio, \"staging\" is done by checking the box next to a given file in the \"Git\" tab\n- Committing files permanently stores them as snapshots to your Git directory\nStep 3: You pull the most recent changes to make sure you’ve been editing the latest versions.\nStep 4: You push your the version of your files that you committed to GitHub.\nHere is the infographic from the start of this chapter again, which shows the same workflow:"
+  },
+  {
+    "objectID": "rstudio.html#stage-versus-commit",
+    "href": "rstudio.html#stage-versus-commit",
+    "title": "RStudio & Git",
+    "section": "Stage versus Commit",
+    "text": "Stage versus Commit\nThe functional difference between “staging” a file and “committing” one can be a little tough to grasp at first so let’s explore that briefly here. We can make an analogy with taking a family picture, where each family member would represent a file.\n\nStaging files is like deciding which family member(s) are going to be in your next picture\nCommitting is like taking the picture\n\nThis 2-step process enables you to flexibly group files into a specific commit. Those groupings can be helpful to you later if you’re trying to find what you changed for a specific task (because those changes likely are all in the same commit)."
+  },
+  {
+    "objectID": "rstudio.html#creating-a-new-r-script",
+    "href": "rstudio.html#creating-a-new-r-script",
+    "title": "RStudio & Git",
+    "section": "Creating a New R Script",
+    "text": "Creating a New R Script\nLet’s try out a simple Git workflow by first creating a new file. This is Step 1 of the process. We can add new R scripts and files to our repository through RStudio. Try creating a new script by going to File &gt; New File &gt; R Script. Feel free to type anything you want into this script as an example. Name this script after yourself. In the screenshot below, I have named my script angel-script.R.\nOnce you are done, navigate to the Git tab on the upper left corner. You should see your new script show up there along with a .gitignore and git-practice.Rproj file. Do not worry about the .gitignore file for now, it was created by RStudio to make sure that some temporary files are not tracked by Git. The git-practice.Rproj file will save your settings and open tabs when you close the project, and will restore these settings the next time you open it.\n Notice that there are color-coded icons next to the files in the “Git” tab. These icons are shorthand for the status–according to Git–of every* file in your working directory. Not technically “every” file because files that are tracked but haven’t been modified are not included. See below for definitions.\n In our case, it means that our R script, .gitignore, and git-practice.Rproj files have never been tracked by Git (since these files were just created). Note also that the README.md file is not listed, but it exists (check the Files pane). It is because files that are tracked but have no modifications since the last commit are not listed."
+  },
+  {
+    "objectID": "rstudio.html#adding-our-script-to-the-next-commit",
+    "href": "rstudio.html#adding-our-script-to-the-next-commit",
+    "title": "RStudio & Git",
+    "section": "Adding our Script to the Next Commit",
+    "text": "Adding our Script to the Next Commit\nLet us look at the diff of our script. Click on the Diff tab.\n\nChecking our script, we can see the new lines that we just typed are in green, which indicates that these lines have been added for Git. We would like to save a snapshot of this version of our script. Since we’ve just done Step 1, here are the rest of the steps we will need to do to get our script to show up on our GitHub repository:\nStep 2: Add the file to the next commit by checking the box in front of the file name. Note that the two ? icons will change to a single A on the left to show you that this file is now staged to be part of the next commit.\nStep 3: In the right pane, type a short but descriptive commit message detailing what you have done so far. Then click on the Commit button to save this version of the script in the Git database.\n\nIf you did all the steps correctly, you should see something like this:\n\nNotice that Git tells us that 1 file changed because we’ve just added a new file to our commit. Now close the window. Before sending our changes back to GitHub, we should make sure that the copy of the repository on RStudio is completely up-to-date with the one on GitHub to avoid any conflicts."
+  },
+  {
+    "objectID": "rstudio.html#getting-the-latest-updates",
+    "href": "rstudio.html#getting-the-latest-updates",
+    "title": "RStudio & Git",
+    "section": "Getting the Latest Updates",
+    "text": "Getting the Latest Updates\nThere are two Git commands to exchange between a local and remote versions of a repository:\n\npull: Git will get the latest remote version and try to merge it with your local version\npush: Git will send your local version to the remote version of the repository (in our case GitHub)\n\nBefore sending your local version to the remote, you should always get the latest remote version first. In other words, you should pull first and push second. This is the way Git protects the remote version against incompatibilities with the local version. You always deal with potential problems on your local machine. Therefore your sequence will always be:\n\nCommit\npull\npush\n\nOf course RStudio has icons for that on top of the “Git” tab, with the blue arrow down being for pull and the green arrow up being for push. Remember the icons are organized in sequence!\nLet us do the pull and push to synchronized the remote repositories. Click on the Pull button to pull changes (if any) from the GitHub repository to the copy on RStudio. We have now synchronized the local (our computer) and remote (on GitHub) versions of our repository. You may have noticed that all of our preceding graphics use blue for pull-related content and green for push-related information. Hopefully that helps cement the two ideas in your mind!\n\nIn my case, it turns out that a new script, lyon-script, was added to the GitHub repository by a collaborator while I was making my own script. Since I have just pulled, lyon-script now shows up in my RStudio files.\n\n\nA new message has popped up for me: “Your branch is ahead of ‘origin/main’ by two commits”. This means that I have two additional commits on my local machine that I never shared back to the remote repository on GitHub. If I look at the content of my repository on GitHub, I will see just the README.md and lyon-script. My changes are NOT in the cloud yet. You might be seeing a similar message as well."
+  },
+  {
+    "objectID": "rstudio.html#sending-changes-back-to-github",
+    "href": "rstudio.html#sending-changes-back-to-github",
+    "title": "RStudio & Git",
+    "section": "Sending Changes back to GitHub",
+    "text": "Sending Changes back to GitHub\nSo how do we send our changes back to GitHub? Locate the Push button on the “Git” tab and click on it. Now your script should show up in the GitHub repository!\n\n\nNavigate back to the GitHub website and find your repository. Check to see if your script has been added correctly. In my case, angel-script.R finally shows up in my repository."
+  },
+  {
+    "objectID": "rstudio.html#rinse-and-repeat",
+    "href": "rstudio.html#rinse-and-repeat",
+    "title": "RStudio & Git",
+    "section": "Rinse and Repeat",
+    "text": "Rinse and Repeat\nGreat! At this point we have (1) successfully connected the Git tracking on your local computer to your GitHub identity, (2) edited a file, (3) commited the changes to that file, and (4) pushed them to GitHub. From here onwards the process of using version control with Git is just repeating steps 2-4 (you only need to do the connection step once.)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Overview",
+    "section": "",
+    "text": "Welcome to the 2022 All Scientists’ Meeting workshop “Reproducible & Collaborative Coding with Git”! We are excited to have you with us for this training whether you are a veteran version control user or this is your first foray into the world of Git and GitHub.\nWhile we will be demonstrating using Git with RStudio today you do NOT need to set up your computer to follow along. That said, we have included instructions on how to get your computer set up if that is of interest."
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Overview",
+    "section": "",
+    "text": "Welcome to the 2022 All Scientists’ Meeting workshop “Reproducible & Collaborative Coding with Git”! We are excited to have you with us for this training whether you are a veteran version control user or this is your first foray into the world of Git and GitHub.\nWhile we will be demonstrating using Git with RStudio today you do NOT need to set up your computer to follow along. That said, we have included instructions on how to get your computer set up if that is of interest."
+  },
+  {
+    "objectID": "index.html#workshop-outline",
+    "href": "index.html#workshop-outline",
+    "title": "Overview",
+    "section": "Workshop Outline*",
+    "text": "Workshop Outline*\n*Note that the specific timing may differ on the day depending on questions and conversations with you all but this is our planned timing.\n3:30p (PT) – Welcome & Introductions\n3:40 – Workflow Options\n3:55 – Exploring GitHub\n4:20 – RStudio & Git\n4:50 – Debrief / Overall Q & A\n5:00 – Done!"
+  },
+  {
+    "objectID": "index.html#lets-get-to-it",
+    "href": "index.html#lets-get-to-it",
+    "title": "Overview",
+    "section": "Let’s Get To It!",
+    "text": "Let’s Get To It!\nWe aim to make this training fun, informative, and not overly terrifying so please reach out if you have any questions before, during, or after the workshop! Our contact information is listed below:\nNick Lyon: lyon@nceas.ucsb.edu | Angel Chen: anchen@nceas.ucsb.edu"
+  },
+  {
+    "objectID": "index.html#post-workshop-survey",
+    "href": "index.html#post-workshop-survey",
+    "title": "Overview",
+    "section": "Post Workshop Survey",
+    "text": "Post Workshop Survey\nWe would love to hear from you all about how we did today! After the workshop, please visit our post-workshop survey or scan this QR code!"
+  },
+  {
     "objectID": "github.html",
     "href": "github.html",
     "title": "Exploring GitHub",
     "section": "",
-    "text": "Version control systems (including git) are built to preserve the iterative versions that we create on the way to a final product. For instance, when writing a scientific manuscript we might have several discrete stages (e.g., separate drafts after successive rounds of feedback from collaborators) as well as the sort of small-scale changes we don’t necessarily preserve in separate files (e.g., workshopping a particular sentence for rhetorical flow, etc.). Version control systems provide a framework for preserving these changes without cluttering your computer with all of the files that precede the final version.\n\n\n\n\ngit can be enabled on a specific folder (a.k.a “directory”) on your file system to track any changes to any content in that folder (including content in sub-folders!). In git (and other version control systems) terms, this tracked folder is called a repository (formally: a specific data structure storing versioning information).\nAlthough there many ways to start a new repository, GitHub (or any other cloud solutions, such as GitLab) provide among the most convenient way of starting a repository."
+    "text": "Version control systems (including Git) are built to preserve the iterative versions that we create on the way to a final product. For instance, when writing a scientific manuscript we might have several discrete stages (e.g., separate drafts after successive rounds of feedback from collaborators) as well as the sort of small-scale changes we don’t necessarily preserve in separate files (e.g., workshopping a particular sentence for rhetorical flow, etc.). Version control systems provide a framework for preserving these changes without cluttering your computer with all of the files that precede the final version.\n\n\n\n\nGit can be enabled on a specific folder (a.k.a “directory”) on your file system to track any changes to any content in that folder (including content in sub-folders!). In Git (and other version control systems) terms, this tracked folder is called a repository (formally: a specific data structure storing versioning information).\nAlthough there many ways to start a new repository, GitHub (or any other cloud solutions, such as GitLab) provide among the most convenient way of starting a repository."
+  },
+  {
+    "objectID": "github.html#version-control-background",
+    "href": "github.html#version-control-background",
+    "title": "Exploring GitHub",
+    "section": "",
+    "text": "Version control systems (including Git) are built to preserve the iterative versions that we create on the way to a final product. For instance, when writing a scientific manuscript we might have several discrete stages (e.g., separate drafts after successive rounds of feedback from collaborators) as well as the sort of small-scale changes we don’t necessarily preserve in separate files (e.g., workshopping a particular sentence for rhetorical flow, etc.). Version control systems provide a framework for preserving these changes without cluttering your computer with all of the files that precede the final version.\n\n\n\n\nGit can be enabled on a specific folder (a.k.a “directory”) on your file system to track any changes to any content in that folder (including content in sub-folders!). In Git (and other version control systems) terms, this tracked folder is called a repository (formally: a specific data structure storing versioning information).\nAlthough there many ways to start a new repository, GitHub (or any other cloud solutions, such as GitLab) provide among the most convenient way of starting a repository."
   },
   {
     "objectID": "github.html#git-versus-github",
     "href": "github.html#git-versus-github",
     "title": "Exploring GitHub",
-    "section": "git versus GitHub",
-    "text": "git versus GitHub\n\ngit is the version control software used to track files\nGitHub is a website that makes it easier to visualize the different repositories git is tracking for a particular user\n\nI.e., GitHub is a graphical user interface (“GUI”) for git"
+    "section": "Git versus GitHub",
+    "text": "Git versus GitHub\n\nGit is the version control software used to track files\nGitHub is a website that makes it easier to visualize the different repositories Git is tracking for a particular user\n\nI.e., GitHub is a graphical user interface (“GUI”) for Git"
   },
   {
     "objectID": "github.html#exploring-github",
     "href": "github.html#exploring-github",
     "title": "Exploring GitHub",
     "section": "Exploring GitHub",
-    "text": "Exploring GitHub\nIn addition to hosting git repositories in a user-friendly way, GitHub also contains several convenient collaboration features! GitHub fosters a great user community to help problem solve and share user-designed coding tools and has great visualization and rendering capacities for data and websites.\nLet’s navigate over to GitHub and explore some of its features. Here is what the home screen looks like as of February 2022.\n\nOnce you have made an account on GitHub (in the same way you’d make an account on any other website), you can sign in by clicking the top right button.\n\nOnce you’ve logged in, you should see something like this:\n\nThis landing page has a nice summary of your recent repositories and activity on the left panel. Click on your icon at the top left corner and navigate to your profile.\n\nYour profile page shows the organizations that you’re a part of, as well as a more detailed view of your GitHub contributions/activities over time. There are also tabs at the top that lead you to your repositories, projects, packages, and starred repositories. If you would like, you can change your GitHub theme to dark mode by clicking on your icon at the top left corner and going to Settings then Appearances. For the purposes of this workshop, the rest of the screenshots for the GitHub website will be in dark mode to help differentiate it from RStudio screenshots.\n\nIf there is anything else you would like to change about your account, the user settings page should have it.\n\nLooking at a GitHub Repository\nTo check the repositories that you’ve created, click on the Repositories tab. Note that the top right corner has a green button that will allow you to create new repositories. We will come back to that later. Let’s take a closer look at what the ucsb-ds-capstone-2021.github.io repository contains.\n\nThis screen shows the copy of a repository stored on GitHub, with its list of files, when the files and directories were last modified, and some information on who made the most recent changes.\n\nIf we look at the blue rectangle, we can see that there have been 151 commits made to this repository. By clicking on that number with the counterclockwise arrow symbol beside it, we can see the history of changes made to all of the files. Looks like 3 users were making changes in April.\n\nAnd finally, if we examine one of the changes made on April 25, we can see exactly what was changed in each file:\n\nThe red lines have been deleted while the green lines are new additions. Tracking these changes, and seeing how they relate to released versions of software and files is exactly what git and GitHub are good for. We will show how they can really be effective for tracking versions of scientific code, figures, and manuscripts to accomplish a reproducible workflow.\nNote: it is possible to edit and add files entirely on the GitHub website, by navigating to the specific file or repository. However, for this workshop, we will be editing and adding files through RStudio instead.\n\n\nCreating a GitHub Repository\nWhile you can create a repository via RStudio and link it to GitHub after the fact, we find it simpler to create the repository on GitHub first then link that to an RStudio project so we will demonstrate that route.\nTo create a new repository on GitHub, follow these steps:\n\nNavigate to your profile page and click on the Repositories tab\nClick on the New button with a book with bookmark symbol\n\n\n\nEnter a descriptive name for your new repository, here we named it git-practice (avoid upper case and use - instead of spaces or _).\nWrite a 1-sentence description about the repository content.\nChoose Public (as of January 2019, GitHub now offers unlimited free private repositories with a maximum of 3 collaborators).\nCheck Add a README file.\n\n\nYay! We’ve just created a new repository! Here is what the landing page should look like:\n\nThis repository is currently public, so it’s visible to anyone, but since we are working in groups, we will need to give access to your group members. Click on the Settings tab for your repository and go to Collaborators.\n\nClick on Add people. Now let’s get the usernames of all of your group members and add them as collaborators to your repository.\n \nGreat! Now everyone in the group should have access to the repository."
-  },
-  {
-    "objectID": "content.html",
-    "href": "content.html",
-    "title": "Content 1",
-    "section": "",
-    "text": "Duplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.yml” and run quarto render in the Terminal to add the page to the deployed website!**\n\n\nIt is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections."
+    "text": "Exploring GitHub\nIn addition to hosting Git repositories in a user-friendly way, GitHub also contains several convenient collaboration features! GitHub fosters a great user community to help problem solve and share user-designed coding tools and has great visualization and rendering capacities for data and websites.\nLet’s navigate over to GitHub and explore some of its features. Here is what the home screen looks like as of February 2022.\n\nOnce you have made an account on GitHub (in the same way you’d make an account on any other website), you can sign in by clicking the top right button.\n\nOnce you’ve logged in, you should see something like this:\n\nThis landing page has a nice summary of your recent repositories and activity on the left panel. Click on your icon at the top left corner and navigate to your profile.\n\nYour profile page shows the organizations that you’re a part of, as well as a more detailed view of your GitHub contributions/activities over time. There are also tabs at the top that lead you to your repositories, projects, packages, and starred repositories. If you would like, you can change your GitHub theme to dark mode by clicking on your icon at the top left corner and going to Settings then Appearances. For the purposes of this workshop, the rest of the screenshots for the GitHub website will be in dark mode to help differentiate it from RStudio screenshots.\n\nIf there is anything else you would like to change about your account, the user settings page should have it.\n\nLooking at a GitHub Repository\nTo check the repositories that you’ve created, click on the Repositories tab. Note that the top right corner has a green button that will allow you to create new repositories. We will come back to that later. Let’s take a closer look at what the ucsb-ds-capstone-2021.github.io repository contains.\n\nThis screen shows the copy of a repository stored on GitHub, with its list of files, when the files and directories were last modified, and some information on who made the most recent changes.\n\nIf we look at the blue rectangle, we can see that there have been 151 commits made to this repository. By clicking on that number with the counterclockwise arrow symbol beside it, we can see the history of changes made to all of the files. Looks like 3 users were making changes in April.\n\nAnd finally, if we examine one of the changes made on April 25, we can see exactly what was changed in each file:\n\nThe red lines have been deleted while the green lines are new additions. Tracking these changes, and seeing how they relate to released versions of software and files is exactly what Git and GitHub are good for. We will show how they can really be effective for tracking versions of scientific code, figures, and manuscripts to accomplish a reproducible workflow.\nNote: it is possible to edit and add files entirely on the GitHub website, by navigating to the specific file or repository. However, for this workshop, we will be editing and adding files through RStudio instead.\n\n\nCreating a GitHub Repository\nWhile you can create a repository via RStudio and link it to GitHub after the fact, we find it simpler to create the repository on GitHub first then link that to an RStudio project so we will demonstrate that route.\nTo create a new repository on GitHub, follow these steps:\n\nNavigate to your profile page and click on the Repositories tab\nClick on the New button with a book with bookmark symbol\n\n\n\nEnter a descriptive name for your new repository, here we named it git-practice (avoid upper case and use - instead of spaces or _).\nWrite a 1-sentence description about the repository content.\nChoose Public (as of January 2019, GitHub now offers unlimited free private repositories with a maximum of 3 collaborators).\nCheck Add a README file.\n\n\nYay! We’ve just created a new repository! Here is what the landing page should look like:\n\nThis repository is currently public, so it’s visible to anyone, but since we are working in groups, we will need to give access to your group members. Click on the Settings tab for your repository and go to Collaborators.\n\nClick on Add people. Now let’s get the usernames of all of your group members and add them as collaborators to your repository.\n \nGreat! Now everyone in the group should have access to the repository."
   },
   {
     "objectID": "workflows.html",
     "href": "workflows.html",
+    "title": "Workflow Options",
+    "section": "",
+    "text": "If you have worked on any file that requires iterative edits, you have had to develop a workflow to approach that task. This could be a scientific paper, analytic code, or a presentation. There are many possible ways you could approach this task leveraging any number of software and hardware options but before we get into our discussion today about collaborative research using GitHub we would like to–briefly–outline two of the typical forms these workflows can take and how they fit into a broader framework of individual and synthesis science."
+  },
+  {
+    "objectID": "workflows.html#overview",
+    "href": "workflows.html#overview",
     "title": "Workflow Options",
     "section": "",
     "text": "If you have worked on any file that requires iterative edits, you have had to develop a workflow to approach that task. This could be a scientific paper, analytic code, or a presentation. There are many possible ways you could approach this task leveraging any number of software and hardware options but before we get into our discussion today about collaborative research using GitHub we would like to–briefly–outline two of the typical forms these workflows can take and how they fit into a broader framework of individual and synthesis science."
@@ -60,153 +179,41 @@
     "href": "workflows.html#to-summarize",
     "title": "Workflow Options",
     "section": "To Summarize:",
-    "text": "To Summarize:\nWhile each approach offers its own strengths and weaknesses, in our experience many scientists avoid version control workflows due to knowledge barriers for getting set up rather than disagreements with the practicalities of version control.\nToday, we will strive to cover the fundamentals of using a version control system to empower you to at least consider this structure as an option going forward.\nPlease don’t hesitate to ask questions and remember that this link is a resource that you should feel free to refer back to if you ever need a refresher (or wish to teach peers)! There is a supplementary appendix at the end of this document that is intended to help you set up version control with git, GitHub, and RStudio should that be of interest."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Overview",
-    "section": "",
-    "text": "Welcome to the 2022 All Scientists’ Meeting workshop “Reproducible & Collaborative Coding with Git”! We are excited to have you with us for this training whether you are a veteran version control user or this is your first foray into the world of git and GitHub.\nWhile we will be demonstrating using git with RStudio today you do NOT need to set up your computer to follow along. That said, we have included instructions on how to get your computer set up if that is of interest."
-  },
-  {
-    "objectID": "index.html#workshop-outline",
-    "href": "index.html#workshop-outline",
-    "title": "Overview",
-    "section": "Workshop Outline*",
-    "text": "Workshop Outline*\n*Note that the specific timing may differ on the day depending on questions and conversations with you all but this is our planned timing.\n3:30p (PT) – Welcome & Introductions\n3:40 – Workflow Options\n3:55 – Exploring GitHub\n4:20 – RStudio & git\n4:50 – Debrief / Overall Q & A\n5:00 – Done!"
-  },
-  {
-    "objectID": "index.html#lets-get-to-it",
-    "href": "index.html#lets-get-to-it",
-    "title": "Overview",
-    "section": "Let’s Get To It!",
-    "text": "Let’s Get To It!\nWe aim to make this training fun, informative, and not overly terrifying so please reach out if you have any questions before, during, or after the workshop! Our contact information is listed below:\nNick Lyon: lyon@nceas.ucsb.edu | Angel Chen: anchen@nceas.ucsb.edu"
-  },
-  {
-    "objectID": "index.html#post-workshop-survey",
-    "href": "index.html#post-workshop-survey",
-    "title": "Overview",
-    "section": "Post Workshop Survey",
-    "text": "Post Workshop Survey\nWe would love to hear from you all about how we did today! After the workshop, please visit our post-workshop survey or scan this QR code!"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Content Creators",
-    "section": "",
-    "text": "This workshop was created and facilitated by a dynamic team that is here to assist you before, during, and after your attendance at the workshop! To learn a bit more about us, see our bios and relevant links below."
-  },
-  {
-    "objectID": "about.html#angel-chen",
-    "href": "about.html#angel-chen",
-    "title": "Content Creators",
-    "section": "Angel Chen",
-    "text": "Angel Chen\n angelchen7 – anchen@nceas.ucsb.edu\n\nAngel supports LTER synthesis working groups by developing data pipelines and reproducible analytical workflows to integrate various sources of data. Angel previously worked as a data curator for the Arctic Data Center, helping researchers archive and store their data. Angel recently completed a B.S. in statistics & data science at the University of California, Santa Barbara."
-  },
-  {
-    "objectID": "about.html#nick-lyon",
-    "href": "about.html#nick-lyon",
-    "title": "Content Creators",
-    "section": "Nick Lyon",
-    "text": "Nick Lyon\nnjlyon0.github.io –  njlyon0 –  @scilyon – lyon@nceas.ucsb.edu\n\nNick has been working on GitHub for years but has only relatively recently started using it to code collaboratively. When he first heard of git/GitHub (as a graduate student) he used it exclusively to track his own solo work. Now that he collaborates with others via GitHub, Nick has a renewed appreciation for the value of version control in team coding work. Nick completed his M.Sc. in Ecology and Evolutionary Biology at Iowa State University"
+    "text": "To Summarize:\nWhile each approach offers its own strengths and weaknesses, in our experience many scientists avoid version control workflows due to knowledge barriers for getting set up rather than disagreements with the practicalities of version control.\nToday, we will strive to cover the fundamentals of using a version control system to empower you to at least consider this structure as an option going forward.\nPlease don’t hesitate to ask questions and remember that this link is a resource that you should feel free to refer back to if you ever need a refresher (or wish to teach peers)! There is a supplementary appendix at the end of this document that is intended to help you set up version control with Git, GitHub, and RStudio should that be of interest."
   },
   {
     "objectID": "setup.html",
     "href": "setup.html",
-    "title": "Setting Up git",
+    "title": "Setting Up Git",
     "section": "",
-    "text": "This workshop has no requirement that you set up git on your own computer. However, we thought it would be helpful to include the steps for that set up in case you are interested before or after.\nThe steps that are necessary for creating the set up we wil demonstrate today fall under two categories:\n\nDownloading needed software\nConnecting that software"
+    "text": "This workshop has no requirement that you set up Git on your own computer. However, we thought it would be helpful to include the steps for that set up in case you are interested before or after.\nThe steps that are necessary for creating the set up we wil demonstrate today fall under two categories:\n\nDownloading needed software\nConnecting that software"
+  },
+  {
+    "objectID": "setup.html#appendix-caveat",
+    "href": "setup.html#appendix-caveat",
+    "title": "Setting Up Git",
+    "section": "",
+    "text": "This workshop has no requirement that you set up Git on your own computer. However, we thought it would be helpful to include the steps for that set up in case you are interested before or after.\nThe steps that are necessary for creating the set up we wil demonstrate today fall under two categories:\n\nDownloading needed software\nConnecting that software"
   },
   {
     "objectID": "setup.html#downloading-programs",
     "href": "setup.html#downloading-programs",
-    "title": "Setting Up git",
+    "title": "Setting Up Git",
     "section": "Downloading Programs",
-    "text": "Downloading Programs\nNote for those of you with a dedicated IT team that has sole power to install software on your computer. You will need to contact them and request they install the three programs listed below.\nThis workshop makes use of three programs: R, RStudio, and git. If you’d like to follow along with us during the workshop you’ll need to install all three programs!\n\nIf you have R and your version begins with the number four (e.g., “4.x.x”) then you do not need to update though it is sometimes useful to have the latest version\nIf you have RStudio and your version starts with 2022 (e.g., “2022.xx.x”) then you don’t need to update this either\nFor the git instructions, if you are a Windows user, be sure to follow along with “Option 1” in the ’installing git instructions above! That variant gives some under-the-hood tools you’ll implicitly rely on later that come preloaded in non-Windows computers."
+    "text": "Downloading Programs\nNote for those of you with a dedicated IT team that has sole power to install software on your computer. You will need to contact them and request they install the three programs listed below.\nThis workshop makes use of three programs: R, RStudio, and Git. If you’d like to follow along with us during the workshop you’ll need to install all three programs!\n\nIf you have R and your version begins with the number four (e.g., “4.x.x”) then you do not need to update though it is sometimes useful to have the latest version\nIf you have RStudio and your version starts with 2022 (e.g., “2022.xx.x”) then you don’t need to update this either\nFor the Git instructions, if you are a Windows user, be sure to follow along with “Option 1” in the ’installing Git instructions above! That variant gives some under-the-hood tools you’ll implicitly rely on later that come preloaded in non-Windows computers."
   },
   {
     "objectID": "setup.html#connecting-programs",
     "href": "setup.html#connecting-programs",
-    "title": "Setting Up git",
+    "title": "Setting Up Git",
     "section": "Connecting Programs",
-    "text": "Connecting Programs\nOnce you’ve installed (or updated), R, RStudio, and git, you’ll need to interlink them.\nTo begin, create a GitHub account via your web browser of choice.\nOnce you have an account on GitHub, tell git on your machine who you are on GitHub (i.e., connect git & GitHub). This step can be done in R/RStudio after you have installed the programs identified above (i.e., no need to visit the command line!).\n\n# Install needed packages\ninstall.packages(\"librarian\")\nlibrarian::shelf(usethis, gitcreds)\n\n# Add your GitHub username and email\nusethis::use_git_config(user.name = \"Jane Doe\",\n                        user.email = \"jane@example.org\")\n\n# Create a \"personal access token\" (Note this will open GitHub in a new browser tab)\nusethis::create_github_token()\n## See steps 6-10 in GitHub's tutorial (link below)\n## See below for password vs. token explanation\n\n# **Copy your Personal Access Token at the end of the above step!**\n\n# Now, give your token to RStudio\n# After you run this line you'll follow some prompts in the \"Console\" tab of RStudio\ngitcreds::gitcreds_set()\n\nAt the end of the above steps you should be all set! For additional information, see GitHub’s PAT Tutorial or the Happy Git with R PAT Tutorial. If this seems a little intimidating, please keep in mind that your experience with downloading programs and creating web accounts will help with these tasks even if you feel that your coding experience is minimal! Again, none of this is required for the ASM 2022 workshop so feel free to skip this whole page of the site if you want!"
+    "text": "Connecting Programs\nOnce you’ve installed (or updated), R, RStudio, and Git, you’ll need to interlink them.\nTo begin, create a GitHub account via your web browser of choice.\nOnce you have an account on GitHub, tell Git on your machine who you are on GitHub (i.e., connect Git & GitHub). This step can be done in R/RStudio after you have installed the programs identified above (i.e., no need to visit the command line!).\n\n# Install needed packages\ninstall.packages(\"librarian\")\nlibrarian::shelf(usethis, gitcreds)\n\n# Add your GitHub username and email\nusethis::use_git_config(user.name = \"Jane Doe\",\n                        user.email = \"jane@example.org\")\n\n# Create a \"personal access token\" (Note this will open GitHub in a new browser tab)\nusethis::create_github_token()\n## See steps 6-10 in GitHub's tutorial (link below)\n## See below for password vs. token explanation\n\n# **Copy your Personal Access Token at the end of the above step!**\n\n# Now, give your token to RStudio\n# After you run this line you'll follow some prompts in the \"Console\" tab of RStudio\ngitcreds::gitcreds_set()\n\nAt the end of the above steps you should be all set! For additional information, see GitHub’s PAT Tutorial or the Happy Git with R PAT Tutorial. If this seems a little intimidating, please keep in mind that your experience with downloading programs and creating web accounts will help with these tasks even if you feel that your coding experience is minimal! Again, none of this is required for the ASM 2022 workshop so feel free to skip this whole page of the site if you want!"
   },
   {
     "objectID": "setup.html#github-password-versus-token",
     "href": "setup.html#github-password-versus-token",
-    "title": "Setting Up git",
+    "title": "Setting Up Git",
     "section": "GitHub Password versus Token",
-    "text": "GitHub Password versus Token\nIf you’ve used git/GitHub before you may have used your GitHub password both to log in online and prove you have authority to access your online repositories when pushing or pulling. If this is the case you may be asking ‘wait, why do I need a token if I already have a password?’. Well, while GitHub still allows passwords for logging in online, they have stopped supporting them for allowing you to push/pull to/from your repositories. A token is GitHub’s method of forcing you to create basically a second, really strong password that ensures your use of git meets their standards of security.\nIf you’ve made a token (or gotten to the token creation step) you may have seen that you decide what powers a specific token is allowed to do and you can set a date where your token expires automatically. This could be helpful if you were working on a public computer because you could create a token that only had the bare minimum power you needed in that moment and you could set it to delete itself after a few days or weeks. If you are working on your own private computer it can sometimes be easier to just give your token all possible powers and set it to never expire but note that GitHub will warn you that this is a security risk (if someone ever got that token they would be able to do anything they wanted until you deleted the token manually). Security risk or no, we have definitely made omnipotent, everlasting tokens to avoid the hassle of re-setting it every however many months so feel free to do the same if you’d like.\nTL;DR: You need to create a token even if you have used a password in the past. Also, when you create the token and GitHub shows you the long string of letters/numbers, we recommend you copy/paste it into an Excel file so you can always find it again if you need to remind RStudio of it in the future."
-  },
-  {
-    "objectID": "rstudio.html",
-    "href": "rstudio.html",
-    "title": "RStudio & git",
-    "section": "",
-    "text": "Before we get into using git and GitHub through RStudio, it will be helpful to review the major steps of including version control as you work on code.\nBeginning on your local computer, you make changes to a file in a folder that you have previously marked for version control tracking (i.e., a working directory). Once those changes are made you can stage changes within your local computer. After staging, it is best to retrieve the latest file versions from the cloud. You likely will already be up-to-date but this preemptive step can save you a lot of heartache down the line. Once you’ve confirmed that you have the latest file versions, you can shift the revised file(s) to the cloud where any GitHub users with access to your project can access the most recent file and look at the history of all previous changes."
-  },
-  {
-    "objectID": "rstudio.html#git-vocabulary",
-    "href": "rstudio.html#git-vocabulary",
-    "title": "RStudio & git",
-    "section": "git Vocabulary",
-    "text": "git Vocabulary\nFinally, it will be helpful to introduce four key pieces of vocabulary before we dive into the rest of this workshop.\n\nClone = copy the entire contents of a GitHub repository to your local computer (done once per computer)\nCommit = move a changed local file to your local staging area (step 2 of the above diagram)\nPull = get file(s) from the cloud to your local computer – opposite of a “push” (step 3)\nPush = move file(s) to the cloud from your local computer – opposite of a “pull” (step 4)"
-  },
-  {
-    "objectID": "rstudio.html#cloning-a-repository",
-    "href": "rstudio.html#cloning-a-repository",
-    "title": "RStudio & git",
-    "section": "Cloning a Repository",
-    "text": "Cloning a Repository\nNow, the first step in using git with RStudio is cloning the repository from GitHub. Note for clarity that in the screenshots below, GitHub is in dark mode while RStudio is in light mode. To clone a repository, follow these steps:\n\nNavigate to the repository on GitHub and click on Code. Select HTTPS and copy the link.\n\n\nNow we switch over to RStudio.\n\nGo to the Project tab on the top right corner and click New Project…. Note that if you don’t use RStudio Projects typically, you will need to use them for any repositories you’d like git to track and GitHub to reflect.\n\n\nSelect Version Control.\n\n\nSelect git.\n\nPaste the repository URL that you just copied from GitHub. Choose a file path on your local computer as the destination for your new project.\n\nNow we have finished cloning the repository to our RStudio! Notice that we are working in our git-practice project and that our README.md file shows up under the list of files, just like in our GitHub repository."
-  },
-  {
-    "objectID": "rstudio.html#git-workflow-overview-reminder",
-    "href": "rstudio.html#git-workflow-overview-reminder",
-    "title": "RStudio & git",
-    "section": "git Workflow Overview Reminder",
-    "text": "git Workflow Overview Reminder\nThe typical workflow with git goes like this:\nStep 1: You modify files in your working directory and save them as usual.\nStep 2: You stage files to mark your intention to “commit” them and then commit that version of those files.\n- In RStudio, \"staging\" is done by checking the box next to a given file in the \"Git\" tab\n- Committing files permanently stores them as snapshots to your `git` directory\nStep 3: You pull the most recent changes to make sure you’ve been editing the latest versions.\nStep 4: You push your the version of your files that you committed to GitHub.\nHere is the infographic from the start of this chapter again, which shows the same workflow:"
-  },
-  {
-    "objectID": "rstudio.html#stage-versus-commit",
-    "href": "rstudio.html#stage-versus-commit",
-    "title": "RStudio & git",
-    "section": "Stage versus Commit",
-    "text": "Stage versus Commit\nThe functional difference between “staging” a file and “committing” one can be a little tough to grasp at first so let’s explore that briefly here. We can make an analogy with taking a family picture, where each family member would represent a file.\n\nStaging files is like deciding which family member(s) are going to be in your next picture\nCommitting is like taking the picture\n\nThis 2-step process enables you to flexibly group files into a specific commit. Those groupings can be helpful to you later if you’re trying to find what you changed for a specific task (because those changes likely are all in the same commit)."
-  },
-  {
-    "objectID": "rstudio.html#creating-a-new-r-script",
-    "href": "rstudio.html#creating-a-new-r-script",
-    "title": "RStudio & git",
-    "section": "Creating a New R Script",
-    "text": "Creating a New R Script\nLet’s try out a simple git workflow by first creating a new file. This is Step 1 of the process. We can add new R scripts and files to our repository through RStudio. Try creating a new script by going to File > New File > R Script. Feel free to type anything you want into this script as an example. Name this script after yourself. In the screenshot below, I have named my script angel-script.R.\nOnce you are done, navigate to the git tab on the upper left corner. You should see your new script show up there along with a .gitignore and git-practice.Rproj file. Do not worry about the .gitignore file for now, it was created by RStudio to make sure that some temporary files are not tracked by git. The git-practice.Rproj file will save your settings and open tabs when you close the project, and will restore these settings the next time you open it.\n Notice that there are color-coded icons next to the files in the “Git” tab. These icons are shorthand for the status–according to git–of every* file in your working directory. Not technically “every” file because files that are tracked but haven’t been modified are not included. See below for definitions.\n In our case, it means that our R script, .gitignore, and git-practice.Rproj files have never been tracked by git (since these files were just created). Note also that the README.md file is not listed, but it exists (check the Files pane). It is because files that are tracked but have no modifications since the last commit are not listed."
-  },
-  {
-    "objectID": "rstudio.html#adding-our-script-to-the-next-commit",
-    "href": "rstudio.html#adding-our-script-to-the-next-commit",
-    "title": "RStudio & git",
-    "section": "Adding our Script to the Next Commit",
-    "text": "Adding our Script to the Next Commit\nLet us look at the diff of our script. Click on the Diff tab.\n\nChecking our script, we can see the new lines that we just typed are in green, which indicates that these lines have been added for git. We would like to save a snapshot of this version of our script. Since we’ve just done Step 1, here are the rest of the steps we will need to do to get our script to show up on our GitHub repository:\nStep 2: Add the file to the next commit by checking the box in front of the file name. Note that the two ? icons will change to a single A on the left to show you that this file is now staged to be part of the next commit.\nStep 3: In the right pane, type a short but descriptive commit message detailing what you have done so far. Then click on the Commit button to save this version of the script in the git database.\n\nIf you did all the steps correctly, you should see something like this:\n\nNotice that git tells us that 1 file changed because we’ve just added a new file to our commit. Now close the window. Before sending our changes back to GitHub, we should make sure that the copy of the repository on RStudio is completely up-to-date with the one on GitHub to avoid any conflicts."
-  },
-  {
-    "objectID": "rstudio.html#getting-the-latest-updates",
-    "href": "rstudio.html#getting-the-latest-updates",
-    "title": "RStudio & git",
-    "section": "Getting the Latest Updates",
-    "text": "Getting the Latest Updates\nThere are two git commands to exchange between a local and remote versions of a repository:\n\npull: git will get the latest remote version and try to merge it with your local version\npush: git will send your local version to the remote version of the repository (in our case GitHub)\n\nBefore sending your local version to the remote, you should always get the latest remote version first. In other words, you should pull first and push second. This is the way git protects the remote version against incompatibilities with the local version. You always deal with potential problems on your local machine. Therefore your sequence will always be:\n\nCommit\npull\npush\n\nOf course RStudio has icons for that on top of the “Git” tab, with the blue arrow down being for pull and the green arrow up being for push. Remember the icons are organized in sequence!\nLet us do the pull and push to synchronized the remote repositories. Click on the Pull button to pull changes (if any) from the GitHub repository to the copy on RStudio. We have now synchronized the local (our computer) and remote (on GitHub) versions of our repository. You may have noticed that all of our preceding graphics use blue for pull-related content and green for push-related information. Hopefully that helps cement the two ideas in your mind!\n\nIn my case, it turns out that a new script, lyon-script, was added to the GitHub repository by a collaborator while I was making my own script. Since I have just pulled, lyon-script now shows up in my RStudio files.\n\n\nA new message has popped up for me: “Your branch is ahead of ‘origin/main’ by two commits”. This means that I have two additional commits on my local machine that I never shared back to the remote repository on GitHub. If I look at the content of my repository on GitHub, I will see just the README.md and lyon-script. My changes are NOT in the cloud yet. You might be seeing a similar message as well."
-  },
-  {
-    "objectID": "rstudio.html#sending-changes-back-to-github",
-    "href": "rstudio.html#sending-changes-back-to-github",
-    "title": "RStudio & git",
-    "section": "Sending Changes back to GitHub",
-    "text": "Sending Changes back to GitHub\nSo how do we send our changes back to GitHub? Locate the Push button on the “Git” tab and click on it. Now your script should show up in the GitHub repository!\n\n\nNavigate back to the GitHub website and find your repository. Check to see if your script has been added correctly. In my case, angel-script.R finally shows up in my repository."
-  },
-  {
-    "objectID": "rstudio.html#rinse-and-repeat",
-    "href": "rstudio.html#rinse-and-repeat",
-    "title": "RStudio & git",
-    "section": "Rinse and Repeat",
-    "text": "Rinse and Repeat\nGreat! At this point we have (1) successfully connected the git tracking on your local computer to your GitHub identity, (2) edited a file, (3) commited the changes to that file, and (4) pushed them to GitHub. From here onwards the process of using version control with git is just repeating steps 2-4 (you only need to do the connection step once.)"
+    "text": "GitHub Password versus Token\nIf you’ve used Git/GitHub before you may have used your GitHub password both to log in online and prove you have authority to access your online repositories when pushing or pulling. If this is the case you may be asking ‘wait, why do I need a token if I already have a password?’. Well, while GitHub still allows passwords for logging in online, they have stopped supporting them for allowing you to push/pull to/from your repositories. A token is GitHub’s method of forcing you to create basically a second, really strong password that ensures your use of Git meets their standards of security.\nIf you’ve made a token (or gotten to the token creation step) you may have seen that you decide what powers a specific token is allowed to do and you can set a date where your token expires automatically. This could be helpful if you were working on a public computer because you could create a token that only had the bare minimum power you needed in that moment and you could set it to delete itself after a few days or weeks. If you are working on your own private computer it can sometimes be easier to just give your token all possible powers and set it to never expire but note that GitHub will warn you that this is a security risk (if someone ever got that token they would be able to do anything they wanted until you deleted the token manually). Security risk or no, we have definitely made omnipotent, everlasting tokens to avoid the hassle of re-setting it every however many months so feel free to do the same if you’d like.\nTL;DR: You need to create a token even if you have used a password in the past. Also, when you create the token and GitHub shows you the long string of letters/numbers, we recommend you copy/paste it into an Excel file so you can always find it again if you need to remind RStudio of it in the future."
   }
 ]

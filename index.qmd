@@ -8,9 +8,9 @@ title: "Overview"
 
 <img src="images/nceas-logo-wide.png" align="right" width="50%"/>
 
-**Welcome to the 2022 All Scientists' Meeting workshop "Reproducible & Collaborative Coding with Git"!** We are excited to have you with us for this training whether you are a veteran version control user or this is your first foray into the world of `git` and GitHub.
+**Welcome to the 2022 All Scientists' Meeting workshop "Reproducible & Collaborative Coding with Git"!** We are excited to have you with us for this training whether you are a veteran version control user or this is your first foray into the world of Git and GitHub.
 
-While we will be demonstrating using `git` with RStudio today you do NOT need to set up your computer to follow along. That said, we have included instructions on how to get your computer set up *if* that is of interest.
+While we will be demonstrating using Git with RStudio today you do NOT need to set up your computer to follow along. That said, we have included instructions on how to get your computer set up *if* that is of interest.
 
 ## Workshop Outline*
 
@@ -22,7 +22,7 @@ While we will be demonstrating using `git` with RStudio today you do NOT need to
 
 3:55 -- Exploring GitHub
 
-4:20 -- RStudio & `git`
+4:20 -- RStudio & Git
 
 4:50 -- Debrief / Overall Q & A
 

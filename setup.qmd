@@ -1,10 +1,10 @@
 ---
-title: "Setting Up `git`"
+title: "Setting Up Git"
 ---
 
 ## Appendix Caveat
 
-**This workshop has no requirement that you set up `git` on your own computer.** However, we thought it would be helpful to include the steps for that set up in case you are interested before or after.
+**This workshop has no requirement that you set up Git on your own computer.** However, we thought it would be helpful to include the steps for that set up in case you are interested before or after.
 
 The steps that are necessary for creating the set up we wil demonstrate today fall under two categories:
 
@@ -15,21 +15,21 @@ The steps that are necessary for creating the set up we wil demonstrate today fa
 
 **Note for those of you with a dedicated IT team that has sole power to install software on your computer.** You will need to contact them and request they install the three programs listed below.
 
-This workshop makes use of three programs: [R](https://www.r-project.org/), [RStudio](https://www.rstudio.com/products/rstudio/download/), and [`git`](https://happygitwithr.com/install-git.html). **If you'd like to follow along with us during the workshop you'll need to install all three programs!**
+This workshop makes use of three programs: [R](https://www.r-project.org/), [RStudio](https://www.rstudio.com/products/rstudio/download/), and [Git](https://happygitwithr.com/install-git.html). **If you'd like to follow along with us during the workshop you'll need to install all three programs!**
 
   - If you have R and your version begins with the number four (e.g., "4.x.x") then you do not *need* to update though it is sometimes useful to have the latest version
   
   - If you have RStudio and your version starts with 2022 (e.g., "2022.xx.x") then you don't need to update this either
 
-  - **For the `git` instructions, if you are a Windows user**, be sure to follow along with "Option 1" in the 'installing `git` instructions above! That variant gives some under-the-hood tools you'll implicitly rely on later that come preloaded in non-Windows computers.
+  - **For the Git instructions, if you are a Windows user**, be sure to follow along with "Option 1" in the 'installing Git instructions above! That variant gives some under-the-hood tools you'll implicitly rely on later that come preloaded in non-Windows computers.
 
 ## Connecting Programs
 
-Once you've installed (or updated), R, RStudio, and `git`, you'll need to interlink them.
+Once you've installed (or updated), R, RStudio, and Git, you'll need to interlink them.
 
 To begin, **[create a GitHub account](https://github.com/)** via your web browser of choice.
 
-Once you have an account on GitHub, tell `git` on your machine who you are on GitHub (i.e., [connect `git` & GitHub](https://happygitwithr.com/hello-git.html)). This step can be done in R/RStudio after you have installed the programs identified above (i.e., no need to visit the command line!).
+Once you have an account on GitHub, tell Git on your machine who you are on GitHub (i.e., [connect Git & GitHub](https://happygitwithr.com/hello-git.html)). This step can be done in R/RStudio after you have installed the programs identified above (i.e., no need to visit the command line!).
   
 ```{r token-process, eval = FALSE}
 # Install needed packages
@@ -56,7 +56,7 @@ At the end of the above steps you should be all set! For additional information,
 
 ## GitHub Password versus Token
 
-If you've used `git`/GitHub before you may have used your GitHub password both to log in online and prove you have authority to access your online repositories when pushing or pulling. If this is the case you may be asking 'wait, why do I need a token if I already have a password?'. Well, while GitHub still allows passwords for logging in online, they have stopped supporting them for allowing you to push/pull to/from your repositories. A token is GitHub's method of forcing you to create basically a second, really strong password that ensures your use of `git` meets their standards of security.
+If you've used Git/GitHub before you may have used your GitHub password both to log in online and prove you have authority to access your online repositories when pushing or pulling. If this is the case you may be asking 'wait, why do I need a token if I already have a password?'. Well, while GitHub still allows passwords for logging in online, they have stopped supporting them for allowing you to push/pull to/from your repositories. A token is GitHub's method of forcing you to create basically a second, really strong password that ensures your use of Git meets their standards of security.
 
 If you've made a token (or gotten to the token creation step) you may have seen that you decide what powers a specific token is allowed to do and you can set a date where your token expires automatically. This could be helpful if you were working on a public computer because you could create a token that only had the bare minimum power you needed in that moment *and* you could set it to delete itself after a few days or weeks. If you are working on your own private computer it can sometimes be easier to just give your token all possible powers and set it to never expire but note that GitHub will warn you that this is a security risk (if someone ever got that token they would be able to do anything they wanted until you deleted the token manually). Security risk or no, we have definitely made omnipotent, everlasting tokens to avoid the hassle of re-setting it every however many months so feel free to do the same if you'd like.
 

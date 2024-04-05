@@ -4,27 +4,27 @@ title: "Exploring GitHub"
 
 ## Version Control Background
 
-**Version control systems (including `git`) are built to preserve the iterative versions that we create on the way to a final product.** For instance, when writing a scientific manuscript we might have several discrete stages (e.g., separate drafts after successive rounds of feedback from collaborators) as well as the sort of small-scale changes we don't necessarily preserve in separate files (e.g., workshopping a particular sentence for rhetorical flow, etc.). Version control systems provide a framework for preserving these changes without cluttering your computer with all of the files that precede the final version.
+**Version control systems (including Git) are built to preserve the iterative versions that we create on the way to a final product.** For instance, when writing a scientific manuscript we might have several discrete stages (e.g., separate drafts after successive rounds of feedback from collaborators) as well as the sort of small-scale changes we don't necessarily preserve in separate files (e.g., workshopping a particular sentence for rhetorical flow, etc.). Version control systems provide a framework for preserving these changes without cluttering your computer with all of the files that precede the final version.
 
 <img src="images/phd_comics_final.png" align="center" width = "60%" />
 
-### `git`-Specific Background
+### Git-Specific Background
 
 <img src="images/github_logo.png" align="right" width="15%"/>
 
-`git` can be enabled on a specific folder (a.k.a "directory") on your file system to track any changes to any content in that folder (including content in sub-folders!). In `git` (and other version control systems) terms, this tracked folder is called a **repository** (formally: a specific data structure storing versioning information).
+Git can be enabled on a specific folder (a.k.a "directory") on your file system to track any changes to any content in that folder (including content in sub-folders!). In Git (and other version control systems) terms, this tracked folder is called a **repository** (formally: a specific data structure storing versioning information).
 
 Although there many ways to start a new repository, [GitHub](https://github.com/) (or any other cloud solutions, such as [GitLab](https://about.gitlab.com/)) provide among the most convenient way of starting a repository.
 
-## `git` versus GitHub
+## Git versus GitHub
 
-- **`git`** is the version control software used to track files
-- **[GitHub](https://github.com/)** is a website that makes it easier to visualize the different repositories `git` is tracking for a particular user
-    - I.e., GitHub is a graphical user interface ("GUI") for `git`
+- **Git** is the version control software used to track files
+- **[GitHub](https://github.com/)** is a website that makes it easier to visualize the different repositories Git is tracking for a particular user
+    - I.e., GitHub is a graphical user interface ("GUI") for Git
 
 ## Exploring GitHub
 
-In addition to hosting `git` repositories in a user-friendly way, **GitHub also contains several convenient collaboration features!** GitHub fosters a great user community to help problem solve and share user-designed coding tools and has great visualization and rendering capacities for data and websites.
+In addition to hosting Git repositories in a user-friendly way, **GitHub also contains several convenient collaboration features!** GitHub fosters a great user community to help problem solve and share user-designed coding tools and has great visualization and rendering capacities for data and websites.
 
 Let's navigate over to [GitHub](https://github.com/) and explore some of its features. Here is what the home screen looks like as of February 2022. 
 
@@ -67,7 +67,7 @@ And finally, if we examine one of the changes made on April 25, we can see exact
 
 ![](images/github-9-specific-changes.png)
 
-The red lines have been deleted while the green lines are new additions. Tracking these changes, and seeing how they relate to released versions of software and files is exactly what `git` and GitHub are good for. We will show how they can really be effective for tracking versions of scientific code, figures, and manuscripts to accomplish a reproducible workflow.
+The red lines have been deleted while the green lines are new additions. Tracking these changes, and seeing how they relate to released versions of software and files is exactly what Git and GitHub are good for. We will show how they can really be effective for tracking versions of scientific code, figures, and manuscripts to accomplish a reproducible workflow.
 
 Note: it is possible to edit and add files entirely on the GitHub website, by navigating to the specific file or repository. However, for this workshop, we will be editing and adding files through RStudio instead. 
 
